@@ -55,7 +55,7 @@ export async function sendOrderLogedIn(userCart,formTarget){
           const country = form.get('country');
           const note = form.get('note');
 
-          const response = await fetch('http://localhost:3000/portfolio/amazon/send-order',{
+          const response = await fetch('https://backend-5zhh.onrender.com/amazon/send-order',{
             method: 'POST',
             headers:{
               'Content-Type':'application/json',
@@ -97,7 +97,7 @@ export async function sendOrderNotLogedIn(userCart,formTarget){
           const city = form.get('city');
           const country = form.get('country');
           const note = form.get('note');
-          const response = await fetch('http://localhost:3000/portfolio/amazon/sendOrderAnonymous',{
+          const response = await fetch('https://backend-5zhh.onrender.com/amazon/sendOrderAnonymous',{
             method: 'POST',
             headers:{
               'Content-Type':'application/json'
@@ -127,7 +127,7 @@ export async function sendOrderNotLogedIn(userCart,formTarget){
 
 export async function getUserOrders(){
   try{
-    const response = await fetch('http://localhost:3000/portfolio/amazon/takeUserOrders',{
+    const response = await fetch('https://backend-5zhh.onrender.com/amazon/takeUserOrders',{
       method:'GET',
       headers:{
         'Content-Type':'application/json',

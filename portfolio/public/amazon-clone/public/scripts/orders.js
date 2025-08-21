@@ -16,7 +16,6 @@ async function load(){
     }
 
     loadOrdersSummary(isLogedIn);
-    updateCartQuantityHeader();
 
     addEventOnClick();
 }

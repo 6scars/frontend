@@ -92,10 +92,11 @@ export let products=[];
 
 
 export function loadProductsFetch(){
+  console.log('productFetch')
   const promise = fetch(
-    'http://localhost:3000/products'
-  ).then((response)=>{
-    return response.json();
+    'https://backend-5zhh.onrender.com/products'
+  ).then(async (response)=>{
+    return await response.json();
   }).then((data)=>{
     products = data.map((item)=>{
         if(item.type === 'clothing'){
@@ -109,6 +110,7 @@ export function loadProductsFetch(){
     }).catch((error)=>{
       console.log(error);
     });
+   
 
   
   return promise;

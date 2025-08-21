@@ -107,7 +107,7 @@ import {cart, loadCartFetch} from '../data/cart-class.js';
     
     // async function sendprod(){
     //     try{
-    //         await fetch('http://localhost:3000/portfolio/amazon/NO-products',{
+    //         await fetch('https://backend-5zhh.onrender.com/amazon/NO-products',{
     //             method: 'POST',
     //             headers:{
     //             'Content-Type':'application/json'
@@ -128,7 +128,7 @@ import {cart, loadCartFetch} from '../data/cart-class.js';
     async function sendOrder(){
         try{
             console.log('wysylam zamowienie');
-            await fetch('http://localhost:3000/portfolio/amazon/send-order',{
+            await fetch('https://backend-5zhh.onrender.com/amazon/send-order',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json'

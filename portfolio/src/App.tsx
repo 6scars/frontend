@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   const goToAmazon = ()=>{
-    window.location.href = "/portfolio/amazon"
+    window.location.href = "/amazon-clone/public/amazon.html"
   };
   return (
       <div>

@@ -59,7 +59,7 @@ function register(){
         }
 
         
-        const respond = await fetch('http://localhost:3000/portfolio/amazon/register',{
+        const respond = await fetch('https://backend-5zhh.onrender.com/amazon/register',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -93,7 +93,7 @@ function login(){
             const formData = new FormData(form);
             const email = formData.get('email');
             const password = formData.get('password');
-            const respond = await fetch('http://localhost:3000/portfolio/amazon/login',{
+            const respond = await fetch('https://backend-5zhh.onrender.com/amazon/login',{
                 method:'POST',
                 headers: {
                     'Content-Type': 'application/json'

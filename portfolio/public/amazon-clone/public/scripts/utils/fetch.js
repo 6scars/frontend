@@ -1,7 +1,7 @@
 
 export async function sendProductToCart(productId, quantSelected){
     try{
-        const response = await fetch('/portfolio/amazon/send-product-to-cart',{
+        const response = await fetch('https://backend-5zhh.onrender.com/amazon/send-product-to-cart',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export async function UserVeryficationToken(){
     try{
         const token = localStorage.getItem('jwt');
         if(!token) return false;
-        const respond = await fetch('http://localhost:3000/portfolio/amazon/veryfication-token',{
+        const respond = await fetch('https://backend-5zhh.onrender.com/amazon/veryfication-token',{
             method:'GET',
             headers:{
                 'Content-type': 'application/json',
@@ -50,8 +50,9 @@ export async function UserVeryficationToken(){
 }
 
 export async function takeUserData() {
+    console.log('datafetch')
     try {
-        const respond = await fetch('http://localhost:3000/portfolio/amazon/userData', {
+        const respond = await fetch('https://backend-5zhh.onrender.com/amazon/userData', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -79,7 +80,7 @@ export async function takeUserData() {
 
 export async function takeUserCart(){
     try{   
-        const response = await fetch('http://localhost:3000/portfolio/amazon/userDataCart',{
+        const response = await fetch('https://backend-5zhh.onrender.com/amazon/userDataCart',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -101,7 +102,7 @@ export async function takeUserCart(){
 
 export async function removeFromCart(productId){
     try{
-        const response = await fetch('http://localhost:3000/portfolio/amazon/removeProdItemCart',{
+        const response = await fetch('https://backend-5zhh.onrender.com/amazon/removeProdItemCart',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -120,7 +121,7 @@ export async function removeFromCart(productId){
 
 export async function changeDeliveryOption(productId, deliveryOptionId){
     try{
-        const response = await fetch('http://localhost:3000/portfolio/amazon/changeDeliveryOption', {
+        const response = await fetch('https://backend-5zhh.onrender.com/amazon/changeDeliveryOption', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json',
@@ -143,7 +144,7 @@ export async function changeDeliveryOption(productId, deliveryOptionId){
 
 export async function changeQuantityCart(productId, quantity){
     try{
-        const response = await fetch('http://localhost:3000/portfolio/amazon/changeQuantityInCart',{
+        const response = await fetch('https://backend-5zhh.onrender.com/amazon/changeQuantityInCart',{
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json',

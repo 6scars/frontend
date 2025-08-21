@@ -78,7 +78,7 @@ export function renderPaymentSummary(data = null, isLogedIn = false){
         try{
           // await sendOrderLogedIn(userCart);
           // cart.removeCart();
-          window.location.href = "/portfolio/amazon/placeYourOrder"
+          window.location.href = "../public/placeYourOrder.html"
         }catch(e){
           console.log('sendOrderLogedIn error paymentSummary:',e);
         }
@@ -90,7 +90,7 @@ export function renderPaymentSummary(data = null, isLogedIn = false){
         try{
           // await sendOrderNotLogedIn(userCart);
           // cart.removeCart();
-          window.location.href = "/portfolio/amazon/placeYourOrder"
+          window.location.href = "../public/placeYourOrder.html"
         }catch(e){
           console.log('sendOrderLogedIn error paymentSummary:',e);
         }
