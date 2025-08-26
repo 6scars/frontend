@@ -88,7 +88,9 @@ function renderHeaderHTML(){
             </select>
           
           
-          <input class="search-bar js-search-bar" type="text" placeholder="${screenWidth<=700 ? '': 'Search'}">
+          <input class="search-bar js-search-bar" type="text" ${screenWidth<=700 ? '': `placeholder = "Search"`}"
+           ${screenWidth<=700 ? `dir="ltr"`: ''}
+          >
           <button class="search-button js-search-button">
 
             <img class="search-icon" src="images/icons/search-icon.png">
@@ -145,7 +147,10 @@ function renderHeaderHTML(){
           
 
           <div class="orders-link header-link your-account js-your-account">
-            <span class="your-account-line-1">${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}</span>
+            <span class="your-account-line-1">
+              ${screenWidth<=700 ? '' : 'Hello'}
+              ${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}
+            </span>
             ${screenWidth<=700 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
             <span class="arrow">▼</span>
 
