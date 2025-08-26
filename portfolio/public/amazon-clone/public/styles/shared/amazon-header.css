@@ -16,6 +16,26 @@
   width:100vw;
   z-index:0;
 }
+
+@media(max-width:700px){
+    .amazon-header {
+      background-color: rgb(19, 25, 33);
+      color: white;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width:100vw;
+      z-index:0;
+  }
+}
 .header-link{
   display: inline-block;
   padding: 6px;

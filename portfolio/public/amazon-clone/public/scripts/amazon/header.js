@@ -145,7 +145,7 @@ function renderHeaderHTML(){
           
 
           <div class="orders-link header-link your-account js-your-account">
-            <span class="your-account-line-1"> Hello, ${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}</span>
+            <span class="your-account-line-1">${ isLogedIn ? ` Hello, ${userData.username}` : '<b>log in</b>'}</span>
             ${screenWidth<=700 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
             <span class="arrow">▼</span>
 
@@ -194,13 +194,13 @@ function renderHeaderHTML(){
               
           </div>
 
-          <a class="orders-link header-link" href="orders.html">
+          <a class="orders-link header-link ${screenWidth<=700 ? 'mobile-orders-link': '' }" href="orders.html">
             <span class="returns-text">Returns</span>
             <span class="orders-text">& Orders</span>
           </a>
 
           <a class="cart-link header-link" href="checkout.html">
-            <img class="cart-icon" src="images/icons/cart-icon.png">
+            <img class="cart-icon ${screenWidth<=700 ? 'mobile-cart-icon' :''}" src="images/icons/cart-icon.png">
             <div class="cart-quantity js-cart-quantity"> ${haveCart ? countQuantity(userDataCart.cartItems) : cart.quantityInCart()}</div>
             <div class="cart-text">${screenWidth<=700 ? '': 'cart'}</div>
           </a>
