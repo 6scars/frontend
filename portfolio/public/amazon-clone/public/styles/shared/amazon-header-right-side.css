@@ -25,9 +25,11 @@
 }
 
 .choose-language-container{
+    margin-top:11px;
     position:relative;
     display:flex;
-    align-items:end;
+    align-items:center;
+    flex-direction:column;
 }
 .choose-language-container .language-text{
     padding:5px;
@@ -38,23 +40,18 @@
     position:relative;
 }
 
-.choose-language-container .arrow{
-    padding-bottom:5px; 
-}
+
 .arrow{
     font-size:8px;
     color:grey;
     padding:0;
 }
 
-.mobile-arrow{
-
-}
 
 .flag{
     width:19px;
     height:17px;
-    margin-bottom:5px;
+
 
 }
 /*drop down */

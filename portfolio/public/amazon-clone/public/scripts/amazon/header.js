@@ -61,8 +61,9 @@ function renderHeaderHTML(){
             </div>
             <div class="nav-lines-container">
             ${screenWidth<=700 ?
-              `<span class="nav-line-1">Delivery to </span>
-              <span class="nav-line-2">Poland</span>`: ''}
+                '':
+                `<span class="nav-line-1">Delivery to </span>
+                <span class="nav-line-2">Poland</span>`}
 
             </div>  
 
@@ -98,10 +99,13 @@ function renderHeaderHTML(){
 
           <div class="choose-language-container header-link">
               <div class="dark-screen"></div>
-            <img class="flag" src="images/icons/united-kingdom.png">
-            <span class="language-text">EN</span>
-            <span class="arrow">▼</span>
-            <div class="dropdown">
+              <div>
+                <img class="flag" src="images/icons/united-kingdom.png">
+                <span class="language-text">EN</span>
+              </div>
+
+              
+              <div class="dropdown">
               <div>
                 <span>Change language</span>
                 <a>learn more</a>
@@ -134,15 +138,16 @@ function renderHeaderHTML(){
                   <a>change country/region.</a>
                 </div>
             </div>
-          
+          <span class="arrow">▼</span>
           </div>
+          
           
           
 
           <div class="orders-link header-link your-account js-your-account">
             <span class="your-account-line-1"> Hello, ${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}</span>
             ${screenWidth<=700 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
-            <span class="arrow ${screenWidth<=700 ? 'mobile-arrow':''}">▼</span>
+            <span class="arrow">▼</span>
 
                 <div class="your-account-dropdown">
               <div class="sing-in-con">
