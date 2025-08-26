@@ -140,8 +140,8 @@ function renderHeaderHTML(){
           
 
           <div class="orders-link header-link your-account js-your-account">
-            <span class="your-account-line-1"> hello ${ isLogedIn ? `${userData.username}` : 'log in'}</span>
-            <span class="your-account-line-2">Account & Lists</span>
+            <span class="your-account-line-1"> Hello ${ isLogedIn ? `${userData.username}` : 'log in'}</span>
+            ${screenWidth<=600 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
             <span class="arrow">▼</span>
 
                 <div class="your-account-dropdown">
@@ -197,7 +197,7 @@ function renderHeaderHTML(){
           <a class="cart-link header-link" href="checkout.html">
             <img class="cart-icon" src="images/icons/cart-icon.png">
             <div class="cart-quantity js-cart-quantity"> ${haveCart ? countQuantity(userDataCart.cartItems) : cart.quantityInCart()}</div>
-            <div class="cart-text">Cart</div>
+            <div class="cart-text">${screenWidth<=600 ? '': 'cart'}</div>
           </a>
         </div>
       `;
