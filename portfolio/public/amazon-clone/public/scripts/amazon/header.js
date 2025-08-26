@@ -6,6 +6,7 @@ let isLogedIn = false;
 let haveCart = false;
 let userData;
 let userDataCart;
+let screenWidth = window.innerWidth;
 verifying();
 
 
@@ -15,6 +16,7 @@ verifying();
 export async function verifying(){
   userData = await takeUserData();
   userDataCart = await takeUserCart();
+  
   
   if(userData){
     isLogedIn = true;
@@ -58,8 +60,10 @@ function renderHeaderHTML(){
               </svg>
             </div>
             <div class="nav-lines-container">
-              <span class="nav-line-1">Delivery to </span>
-              <span class="nav-line-2">Poland</span>
+            ${screenWidth>600 ?
+              `<span class="nav-line-1">Delivery to </span>
+              <span class="nav-line-2">Poland</span>`: ''}
+
             </div>  
 
           </div>
