@@ -207,7 +207,13 @@ function renderHeaderHTML(){
         </div>
       `;
   function displayHeader(){
-      document.querySelector('.amazon-header').innerHTML=headerHTML;
+      const header = document.querySelector('.amazon-header')
+      header.innerHTML = headerHTML;
+
+      requestAnimationFrame(()=>{
+        EventListenersHeader();
+      })
+
   }
   displayHeader();
 
@@ -284,7 +290,6 @@ function renderHeaderHTML(){
 
 
   }
-  EventListenersHeader();
 
 
 
