@@ -145,7 +145,7 @@ function renderHeaderHTML(){
           
 
           <div class="orders-link header-link your-account js-your-account">
-            <span class="your-account-line-1">${ isLogedIn ? ` Hello, ${userData.username}` : '<b>log in</b>'}</span>
+            <span class="your-account-line-1">${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}</span>
             ${screenWidth<=700 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
             <span class="arrow">▼</span>
 

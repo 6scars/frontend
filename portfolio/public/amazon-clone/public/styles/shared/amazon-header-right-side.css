@@ -281,6 +281,31 @@
             margin-bottom:5px;
         }
 
+        @media(max-width:700px){
+            .your-account-dropdown{
+                position:absolute;
+                top:45px;
+                left:-175px;
+                
+                display:none;
+                border-radius:3px;
+                box-shadow:0 0 7px rgba(0, 0, 0, 0.765);
+
+                background-color:rgb(255, 255, 255);
+                
+                width:300px;
+                height:370px;
+
+                padding:0 0 15px 0;
+
+                font-size:14px;
+                color:black;
+                cursor:auto;
+            
+            
+            }
+        }
+
         /*return and orders*/
 .returns-text {
     display: block;
