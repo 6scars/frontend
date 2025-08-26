@@ -76,7 +76,8 @@ function renderHeaderHTML(){
         <div class="amazon-header-middle-section">
           
             <select class="type-of-products-select">
-              <option selected="selected" value="All">All</option>
+              <option selected="selected" value="All">${screenWidth>600 ? 'All':''}</option>
+              <option value="All">All</option>
               <option value="Arts & Crafts">Arts & Crafts</option>
               <option value="Automotive">Automotive</option>
               <option value="Baby">Baby</option>
