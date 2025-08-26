@@ -200,7 +200,7 @@ function renderHeaderHTML(){
           </a>
 
           <a class="cart-link header-link" href="checkout.html">
-            <img class="cart-icon ${screenWidth<=700 ? 'mobile-cart-icon' :''}" src="images/icons/cart-icon.png">
+            <img class="cart-icon" src="images/icons/cart-icon.png">
             <div class="cart-quantity js-cart-quantity"> ${haveCart ? countQuantity(userDataCart.cartItems) : cart.quantityInCart()}</div>
             <div class="cart-text">${screenWidth<=700 ? '': 'cart'}</div>
           </a>

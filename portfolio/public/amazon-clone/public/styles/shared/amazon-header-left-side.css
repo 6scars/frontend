@@ -1,5 +1,6 @@
 /* LEFT */
 .amazon-header-left-section {
+  padding-left:15px;
   width:210px;
   height:60px;
   display:flex;
