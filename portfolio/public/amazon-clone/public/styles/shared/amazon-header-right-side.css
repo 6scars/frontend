@@ -46,6 +46,11 @@
     color:grey;
     padding:0;
 }
+
+.mobile-arrow{
+
+}
+
 .flag{
     width:19px;
     height:17px;
@@ -135,6 +140,9 @@
             position:relative;
             padding-top:10px;
             line-height:14px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
         }
         .your-account-line-1{
             display:block;

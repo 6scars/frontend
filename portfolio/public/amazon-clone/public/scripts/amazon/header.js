@@ -60,7 +60,7 @@ function renderHeaderHTML(){
               </svg>
             </div>
             <div class="nav-lines-container">
-            ${screenWidth>600 ?
+            ${screenWidth<=700 ?
               `<span class="nav-line-1">Delivery to </span>
               <span class="nav-line-2">Poland</span>`: ''}
 
@@ -76,7 +76,7 @@ function renderHeaderHTML(){
         <div class="amazon-header-middle-section">
           
             <select class="type-of-products-select">
-              <option selected="selected" value="All">${screenWidth>600 ? 'All':''}</option>
+              <option selected="selected" value="All">${screenWidth<=700 ? '':'All'}</option>
               <option value="All">All</option>
               <option value="Arts & Crafts">Arts & Crafts</option>
               <option value="Automotive">Automotive</option>
@@ -87,7 +87,7 @@ function renderHeaderHTML(){
             </select>
           
           
-          <input class="search-bar js-search-bar" type="text" placeholder="Search">
+          <input class="search-bar js-search-bar" type="text" placeholder="${screenWidth<=700 ? '': 'Search'}">
           <button class="search-button js-search-button">
 
             <img class="search-icon" src="images/icons/search-icon.png">
@@ -140,9 +140,9 @@ function renderHeaderHTML(){
           
 
           <div class="orders-link header-link your-account js-your-account">
-            <span class="your-account-line-1"> Hello ${ isLogedIn ? `${userData.username}` : 'log in'}</span>
-            ${screenWidth<=600 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
-            <span class="arrow">▼</span>
+            <span class="your-account-line-1"> Hello, ${ isLogedIn ? `${userData.username}` : '<b>log in</b>'}</span>
+            ${screenWidth<=700 ? '':`<span class="your-account-line-2">Account & Lists</span>`}
+            <span class="arrow ${screenWidth<=700 ? 'mobile-arrow':''}">▼</span>
 
                 <div class="your-account-dropdown">
               <div class="sing-in-con">
@@ -197,7 +197,7 @@ function renderHeaderHTML(){
           <a class="cart-link header-link" href="checkout.html">
             <img class="cart-icon" src="images/icons/cart-icon.png">
             <div class="cart-quantity js-cart-quantity"> ${haveCart ? countQuantity(userDataCart.cartItems) : cart.quantityInCart()}</div>
-            <div class="cart-text">${screenWidth<=600 ? '': 'cart'}</div>
+            <div class="cart-text">${screenWidth<=700 ? '': 'cart'}</div>
           </a>
         </div>
       `;
