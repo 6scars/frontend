@@ -47,7 +47,7 @@ export async function loadProductsGrid(){
             </div>
 
             <div class="product-rating-container">
-              <img class="product-rating-stars" src="${content.getStarsUrl()}">
+              <img class="product-rating-stars" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/${content.getStarsUrl()}">
               <div class="product-rating-count link-primary">
                 ${content.rating.count}
               </div>
