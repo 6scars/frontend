@@ -11,7 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-portfolio/public/amazon-clone/public/images/
+/portfolio/public/amazon-clone/public/images/
+
 
 # Editor directories and files
 .vscode/*
