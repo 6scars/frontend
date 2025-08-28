@@ -38,9 +38,9 @@ function renderHeaderHTML(){
           <div class="amazon-logo-container">
             <a href="amazon.html" class="header-link">
               <img class="amazon-logo"
-                src="images/amazon-logo-white.png">
+                src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/amazon-logo-white.png">
               <img class="amazon-mobile-logo"
-                src="images/amazon-mobile-logo-white.png">
+                src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/amazon-mobile-logo-white.png">
             </a>
           </div>
           <div class="delivery-to-container">
@@ -93,7 +93,7 @@ function renderHeaderHTML(){
           >
           <button class="search-button js-search-button">
 
-            <img class="search-icon" src="images/icons/search-icon.png">
+            <img class="search-icon" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/search-icon.png">
           </button>
         </div>
       
@@ -102,7 +102,7 @@ function renderHeaderHTML(){
           <div class="choose-language-container header-link">
               <div class="dark-screen"></div>
               <div>
-                <img class="flag" src="images/icons/united-kingdom.png">
+                <img class="flag" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/united-kingdom.png">
                 <span class="language-text">EN</span>
               </div>
 
@@ -133,7 +133,7 @@ function renderHeaderHTML(){
                 </div>
                 <div class="devider"></div>
                 <div style="display:flex">
-                  <img style="width:15px; height:15px;" src="images/icons/united-kingdom.png">
+                  <img style="width:15px; height:15px;" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/united-kingdom.png">
                   <span>You are shopping on Amazon.com</span>
                 </div>
                 <div style="display:flex; padding-left:17%; width:auto; height:25px; align-items:center;">
@@ -205,7 +205,7 @@ function renderHeaderHTML(){
           </a>
 
           <a class="cart-link header-link" href="checkout.html">
-            <img class="cart-icon" src="images/icons/cart-icon.png">
+            <img class="cart-icon" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/cart-icon.png">
             <div class="cart-quantity js-cart-quantity"> ${haveCart ? countQuantity(userDataCart.cartItems) : cart.quantityInCart()}</div>
             <div class="cart-text">${screenWidth<=700 ? '': 'cart'}</div>
           </a>

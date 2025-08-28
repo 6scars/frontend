@@ -71,7 +71,7 @@ function details(list,OrderPlaced){
                     Quantity: ${orderPro.quantity}
                 </div>
                     <button class="buy-again-button button-primary js-buy-again-button" data-product-id="${product.id}">
-                        <img class="buy-again-icon" src="images/icons/buy-again.png">
+                        <img class="buy-again-icon" src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/buy-again.png">
                         <span class="buy-again-message">Buy it again</span>
                     </button>
                     </div>

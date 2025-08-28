@@ -76,7 +76,7 @@ export async function loadProductsGrid(){
             <div class="product-spacer"></div>
 
             <div class="added-to-cart product-${content.id}">
-                <img src="images/icons/checkmark.png">
+                <img src="https://rgmmwhkixprkskznqjcy.supabase.co/storage/v1/object/public/images/images/icons/checkmark.png">
                 Added
             </div>
 
