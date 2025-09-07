@@ -6,7 +6,7 @@ export function HomePage() {
 
   return (
     <>
-        <div className="contact">Kontakt</div>
+        <div >Kontakt</div>
       <button onClick={goToAmazon}>go to amazon</button>
     </>
   );
