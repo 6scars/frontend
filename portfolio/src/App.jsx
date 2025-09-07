@@ -1,14 +1,12 @@
 import './App.css';
+import {HomePage }from './pages/HomePage.jsx'
 
 function App() {
-  const goToAmazon = ()=>{
-    window.location.href = "/amazon-clone/public/amazon.html"
-  };
+
   return (
       <div>
-        <button
-          onClick={goToAmazon}
-        >go to amazon</button>
+        <HomePage />
+
 
       </div>
   );
