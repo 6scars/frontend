@@ -51,8 +51,8 @@ export function HomePage() {
         </div>
         <div className="home-desc gradient-wrapper">
           <div id="about" className="home-left glass move">
-            <h1>ABOUT</h1>
-            <p>
+            <h1 class="slide-down" >ABOUT</h1>
+            <p className="slide-down-2">
               Hi! I’m Marcin, a Full-Stack Developer. I build responsive,
               interactive web applications from front-end to back-end. What I
               offer: Front-End: clean, intuitive UI with React, JavaScript,
