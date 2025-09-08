@@ -22,8 +22,6 @@
   }
 }
 
-
-
 :root {
   --main-color: HSL(240, 37%, 7%);
   --main-color2: HSL(240, 37%, 98%);
@@ -31,7 +29,6 @@
   --secound-color2: HSL(240, 37%, 17%);
   --secound-color3: HSL(240, 37%, 27%);
 }
-
 
 @layer components {
   .move {
@@ -44,7 +41,7 @@
       #00000000,
       #00000000
     );
-    background-size:200%;
+    background-size: 200%;
     animation: gradientMove 10s ease infinite;
   }
 }
@@ -63,35 +60,57 @@
   }
 }
 
-.gradient-wrapper{
-  position:relative;
+.gradient-wrapper {
+  position: relative;
 }
 
-.gradient-wrapper::before{
-  content:"";
-  position:absolute;
-  inset:0;
-    background: linear-gradient(
-      -45deg,
-      var(--secound-color3),
-      var(--secound-color2),
-      var(--main-color),
-      #00000035,
-      #00000000,
-      #00000000
-    );
-    background-size:200%;
-    animation: gradientMove 10s ease infinite;
-    pointer-events:none;
-    z-index:0;
-
+.gradient-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    var(--secound-color3),
+    var(--secound-color2),
+    var(--main-color),
+    #00000035,
+    #00000000,
+    #00000000
+  );
+  background-size: 200%;
+  animation: gradientMove 10s ease infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.gradient-wrapper .glass{
+.gradient-wrapper .glass {
   position: relative;
   z-index: 1;
-  background-color: rgba(255,255,255,0.1); /* półprzezroczysty glass */
+  background-color: rgba(255, 255, 255, 0.1); /* półprzezroczysty glass */
 }
+
+.shine-links {
+  @apply relative overflow-hidden
+}
+
+.shine-links::before {
+  @apply content-[""]
+  left-[-100%]
+    w-full h-full
+    absolute
+    bg-white/10
+    rounded-md
+    bg-gradient-to-r from-transparent via-white/30 to-transparent
+    skew-x-[-20] transition-all duration-700;
+    
+}
+.shine-links:hover:before{
+  @apply left-[100%] bg-white/50
+    size-109
+  
+}
+
+
 
 #root {
   padding: 0;
@@ -122,10 +141,8 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: 0; /* żeby było za treścią */
+  z-index: 0;
 }
-
-
 
 h1 {
   @apply font-bold inline text-4xl;
@@ -141,24 +158,21 @@ header {
     flex
     justify-end
     items-center
-    text-[var(--main-color1)]
-
+    text-[var(--main-color1)];
 }
 
 header a {
   @apply flex justify-center items-center
     mx-4 min-w-20 h-full 
-    border border-gray-800 rounded-full 
-    bg-white/20 backdrop-blur-sm ring-1 ring-white/50 bg-gradient-to-tl from-white/50 to-white/20
+    shadow-xs shadow-white rounded-full 
+    bg-white/1 backdrop-blur-sm  ring-white/50 bg-gradient-to-tl from-white/20 to-white/5
     transition-colors duration-300 ease-linear
-    transition-transform
+    transition-transform;
 }
 
 header a:hover {
-  @apply text-white scale-102
+  @apply text-white scale-101;
 }
-
-
 
 /*--------------------------MAIN--------------------------*/
 
@@ -168,7 +182,7 @@ header a:hover {
 }
 
 .home .home-left {
-  @apply text-5xl   flex-[2] box-border p-10 text-xl;
+  @apply text-5xl   flex-[2] box-border p-10 text-xl  ;
 }
 
 .home .home-right {
@@ -188,6 +202,22 @@ header a:hover {
   @apply w-full h-full object-cover;
 }
 
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity:0; }
+  to {transform: translateY(0px); opacity:1; }
+}
+
+.slide-down {
+  @apply opacity-0 will-change-transform;
+  animation: slideDown 1.5s cubic-bezier(.20,.9,.40,1) 0.2s forwards
+}
+.slide-down-2{
+  @apply opacity-0 will-change-transform;
+  animation: slideDown 1s cubic-bezier(.20,.9,.40,1) 1s forwards
+}
+
+
+
 /*---------- home-desc ----------*/
 
 .home-desc {
@@ -195,7 +225,7 @@ header a:hover {
 }
 
 .home-desc .home-left {
-  @apply flex-5 m-2
+  @apply flex-5 m-2;
 }
 .home-desc .home-right {
   @apply flex-1  m-2 flex flex-col justify-start flex-col;

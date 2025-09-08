@@ -13,28 +13,37 @@ export function HomePage() {
         <source src={stars} type="video/mp4 " />
       </video>
       <header className="glass move">
-        <a href="#about" > About</a>
+        <a className="shine-links" href="#about">
+          {" "}
+          About
+        </a>
 
-        <a href="#contact"> Contact</a>
+        <a className="shine-links" href="#contact">
+          {" "}
+          Contact
+        </a>
 
-        <a href="#projects"> Projects</a>
+        <a className="shine-links" href="#projects">
+          {" "}
+          Projects
+        </a>
       </header>
       <main>
         <div className="home gradient-wrapper">
-          <div className="home-left glass move">
-            <h1>Hi! </h1>
-            <p className="inline welcome-p">
-              I'm a Front-End Developer passionate about building interactive
-              and responsive web applications.
-            </p>
-            <p>
+          <div className="home-left glass move ">
+            <div className="slide-down">
+              <h1>Hi! </h1>
+              <p className=" inline welcome-p ">
+                I'm a Front-End Developer passionate about building interactive
+                and responsive web applications.
+              </p>
+            </div>
+            <p className="slide-down-2" >
               I specialize in JavaScript, HTML, CSS, React, and Tailwind, and I
               also have experience with backend technologies like Node.js,
               Express, MongoDB, MySQL, and deployment on platforms like Vercel
               and Render.
             </p>
-
-            
           </div>
           <div className="home-right glass move">
             <img className="profile-photo" src={profile} alt="profile" />
@@ -55,9 +64,7 @@ export function HomePage() {
               functionality, and performance.
             </p>
 
-            <p>
-
-            </p>
+            <p></p>
           </div>
           <div id="projects" className="home-right glass move">
             <h3>PROJECTS</h3>
