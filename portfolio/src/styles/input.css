@@ -178,7 +178,7 @@ header a:hover {
 
 /*---------- home ----------*/
 .home {
-  @apply w-full  flex justify-center min-h-[95vh] box-border p-3;
+  @apply w-full  flex gap-5 justify-center min-h-[95vh] box-border p-3;
 }
 
 .home .home-left {
@@ -186,8 +186,12 @@ header a:hover {
 }
 
 .home .home-right {
-  @apply flex-[1] box-border flex items-center
-  justify-center;
+  @apply flex-[1]  h-[100vh] box-border flex  gap-5 flex-col;
+}
+
+.home-right-image,
+.home-right-contact{
+  @apply h-[50vh] 
 }
 
 .home .home-left p {

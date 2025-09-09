@@ -1,5 +1,6 @@
 import profile from "./images/img.jpg";
 import amazonIcon from "./images/amazon-simple.svg";
+import gitIcon from "./images/github-icon.svg"
 import stars from "./images/stars.mp4";
 
 export function HomePage() {
@@ -45,9 +46,17 @@ export function HomePage() {
               and Render.
             </p>
           </div>
-          <div className="home-right glass move">
-            <img className="profile-photo" src={profile} alt="profile" />
+          <div className="home-right">
+            <div className="home-right-image glass move">
+              <img className="profile-photo" src={profile} alt="profile" />
+            </div>
+            <div className="home-right-contact glass move">
+                <h1 class="slide-down" >CONTACT</h1>
+                <img className="h-10 w-10 inline" src={gitIcon} alt="github"/><p className="inline " >GITHUB</p>
+                <p>marcin.michon6@o2.pl</p>
+            </div>
           </div>
+
         </div>
         <div className="home-desc gradient-wrapper">
           <div id="about" className="home-left glass move">
