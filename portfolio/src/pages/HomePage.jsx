@@ -8,6 +8,11 @@ export function HomePage() {
     window.location.href = "/amazon-clone/public/amazon.html";
   };
 
+  const goToGithub = () => {
+    window.location.href = "https://github.com/6scars";
+
+  }
+
   return (
     <>
       <video autoPlay muted loop id="background-video">
@@ -35,11 +40,11 @@ export function HomePage() {
             <div className="slide-down">
               <h1>Hi! </h1>
               <p className=" inline welcome-p ">
-                I'm a Front-End Developer passionate about building interactive
+                I'm a Full-Stack Developer passionate about building interactive
                 and responsive web applications.
               </p>
             </div>
-            <p className="slide-down-2" >
+            <p className="slide-down-2 " >
               I specialize in JavaScript, HTML, CSS, React, and Tailwind, and I
               also have experience with backend technologies like Node.js,
               Express, MongoDB, MySQL, and deployment on platforms like Vercel
@@ -51,26 +56,59 @@ export function HomePage() {
               <img className="profile-photo" src={profile} alt="profile" />
             </div>
             <div className="home-right-contact glass move">
-                <h1 class="slide-down" >CONTACT</h1>
-                <img className="h-10 w-10 inline" src={gitIcon} alt="github"/><p className="inline " >GITHUB</p>
-                <p>marcin.michon6@o2.pl</p>
+              <h1 class="slide-down block" >Contact</h1>
+              <h1 class="slide-down  block"> & Social</h1>
+              <a href="https://github.com/6scars" >
+                <div className="contact-link github-link">
+                  <img className="h-10 w-10 inline" src={gitIcon} alt="github" /><p className="inline " >GITHUB</p>
+                </div>
+              </a>
+              <p>marcin.michon6@o2.pl</p>
             </div>
           </div>
 
         </div>
         <div className="home-desc gradient-wrapper">
           <div id="about" className="home-left glass move">
-            <h1 class="slide-down" >ABOUT</h1>
+            <h1 class="slide-down text-[3rem] " >ABOUT</h1>
             <p className="slide-down-2">
-              Hi! I’m Marcin, a Full-Stack Developer. I build responsive,
-              interactive web applications from front-end to back-end. What I
-              offer: Front-End: clean, intuitive UI with React, JavaScript,
-              Tailwind CSS, HTML/CSS Back-End: robust APIs and database
-              management with Node.js, Express, MongoDB, MySQL Deployment &
-              Performance: scalable apps deployed on Vercel or Render
-              Problem-Solving: creative, efficient solutions for real-world
-              challenges I deliver complete applications, combining good design,
-              functionality, and performance.
+              <p className="text-[1.3rem]  pt-10">
+                <h1 className="inline text-[2rem] ">Hi!</h1> I’m <h1 className="inline inline text-[2rem]">Marcin</h1>,a Full-Stack Developer<br />
+                I build <i>responsive, interactive</i> web applications from front-end to back-end.
+                <div>
+                  <u>What I offer:</u> <i>clean, intuitive</i> UI with
+                </div>
+              </p>
+              <ul >
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>Tailwind CSS</li>
+                <li>HTML/CSS</li>
+
+              </ul>
+
+              <p className="text-[1.2rem] pt-10">
+                Robust APIs and database
+                management with
+              </p>
+              <ul>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>MySQL Deployment</li>
+              </ul>
+              <p className="pt-10">
+                <p className=" text-[1.5rem] mb-5">I Have <u>experience</u> with <b>deploying</b><br /> <i>scalable</i> apps  on <i>Vercel or Render </i>
+                  <i>creative, efficient</i> solutions for real-world
+                  challenges
+                </p>
+                <p className="text-[1.5rem] ">
+                  I deliver complete applications<br /> combining <b>good</b> design,
+                  <i>functionality, and performance.</i>
+                </p>
+
+              </p>
+
             </p>
 
             <p></p>
@@ -83,10 +121,11 @@ export function HomePage() {
                 alt="amazon-icon"
                 src={amazonIcon}
               />
+
             </button>
           </div>
         </div>
-      </main>
+      </main >
       <footer>made by Marcin</footer>
     </>
   );

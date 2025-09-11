@@ -145,7 +145,7 @@ body {
 }
 
 h1 {
-  @apply font-bold inline text-4xl;
+  @apply font-bold inline;
 }
 
 /*--------------------------HEADER--------------------------*/
@@ -178,15 +178,19 @@ header a:hover {
 
 /*---------- home ----------*/
 .home {
-  @apply w-full  flex gap-5 justify-center min-h-[95vh] box-border p-3;
+  @apply w-full text-shadow-white/50 text-shadow-[0_5px_25px]   flex gap-5 justify-center min-h-[95vh] box-border p-3;
 }
 
 .home .home-left {
-  @apply text-5xl   flex-[2] box-border p-10 text-xl  ;
+  @apply text-5xl   flex-[2] box-border p-10 text-xl ;
 }
 
 .home .home-right {
   @apply flex-[1]  h-[100vh] box-border flex  gap-5 flex-col;
+}
+
+.contact-link {
+  @apply cursor-pointer rounded-md bg-black ring
 }
 
 .home-right-image,
@@ -230,20 +234,20 @@ header a:hover {
 }
 
 .home-desc .home-left {
-  @apply flex-5 m-2;
+  @apply flex-5 m-2 pb-10 text-shadow-white/50 text-shadow-[0_5px_25px];
 }
 .home-desc .home-right {
   @apply flex-1  m-2 flex flex-col justify-start flex-col;
 }
 
 .home-desc button {
-  @apply m-5 rounded-md  max-h-13 flex justify-between
+  @apply m-5 rounded-md  max-h-13 flex justify-center items-center
   bg-orange-800/30 backdrop-blur-md  shadow-lg rounded-2xl
   backdrop-saturate-150 ring-1 ring-orange-700/40 bg-gradient-to-b from-yellow-500/90 to-orange-500/100;
 }
 
 .amazon-button:hover {
-  @apply bg-blue-800 cursor-pointer;
+  @apply bg-blue-800  cursor-pointer;
 }
 
 /*--------------------------FOOTER--------------------------*/
