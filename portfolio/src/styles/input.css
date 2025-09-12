@@ -200,7 +200,7 @@ header a:hover {
 
 
 .home .home-left p {
-  @apply text-left pb-10 mt-20;
+  @apply text-left pb-10 mt-20 p-1
 }
 
 .welcome-p {
