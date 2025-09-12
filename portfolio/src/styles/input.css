@@ -51,7 +51,7 @@
   position: relative;
 }
 
-.gradient-wrapper::before {
+.gradient-wrapper::before:has() {
   content: "";
   position: absolute;
   inset: 0;
@@ -72,7 +72,6 @@
   position: relative;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.1);
-  /* półprzezroczysty glass */
 }
 
 .shine-links {
@@ -145,24 +144,29 @@ header a:hover {
 
 /*---------- home ----------*/
 .home {
-  @apply w-full text-shadow-white/50 text-shadow-[0_5px_25px] flex gap-5 justify-center min-h-[95vh] box-border p-3;
+  @apply w-full text-shadow-white/50 text-shadow-[0_5px_25px] flex gap-5 justify-center min-h-[95vh] box-border p-3 ;
+  
 }
 
 .home .home-left {
-  @apply text-5xl flex-[2] box-border p-10 text-xl;
+  @apply text-5xl flex-[2] box-border p-10 text-xl  shadow-white/90 shadow-[0px_0px_5px_1px] 
 }
 
 .home .home-right {
-  @apply flex-[1] h-[100vh] box-border flex gap-5 flex-col;
+  @apply flex-[1] h-[100vh] box-border flex gap-5 flex-col  ;
 }
 
+
+.home-right-contact{
+  @apply  shadow-white/90 shadow-[0px_0px_5px_1px]
+}
 .contact-link {
   @apply cursor-pointer rounded-md bg-black ring
 }
 
 .home-right-image,
 .home-right-contact {
-  @apply h-[50vh]
+  @apply h-[50vh] shadow-white/90 shadow-[0px_0px_5px_1px]
 }
 
 
@@ -171,7 +175,7 @@ header a:hover {
 }
 
 .welcome-p {
-  @apply text-4xl text-[var(--secound-color-text)];
+  @apply  text-2xl text-[var(--secound-color-text)];
 }
 
 .profile-photo {
@@ -265,15 +269,15 @@ header a:hover {
 /*---------- home-desc ----------*/
 
 .home-desc {
-  @apply w-full flex justify-center;
+  @apply w-full flex justify-center ;
 }
 
 .home-desc .home-left {
-  @apply flex-5 m-2 pb-10 text-shadow-white/50 text-shadow-[0_5px_25px];
+  @apply flex-5 m-2 pb-10 text-shadow-white/50 text-shadow-[0_5px_25px] shadow-white/90 shadow-[0px_0px_5px_1px] ;
 }
 
 .home-desc .home-right {
-  @apply flex-1 m-2 flex flex-col justify-start flex-col;
+  @apply flex-1 m-2 flex flex-col justify-start flex-col shadow-white/90 shadow-[0px_0px_5px_1px] ;
 }
 
 .home-desc button {

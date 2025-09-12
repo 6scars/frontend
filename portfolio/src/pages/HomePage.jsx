@@ -3,7 +3,7 @@ import amazonIcon from "./images/amazon-simple.svg";
 import gitIcon from "./images/github-icon.svg"
 import stars from "./images/stars.mp4";
 
-export function  HomePage () {
+export function HomePage() {
   const goToAmazon = () => {
     window.location.href = "/amazon-clone/public/amazon.html";
   };
@@ -15,7 +15,7 @@ export function  HomePage () {
 
   return (
     <>
-    <div className="intro" ><p className="intro-text" >Marcin Michon Dev</p></div>
+      <div className="intro" ><p className="intro-text" >Marcin Michon Dev</p></div>
       <video autoPlay muted loop id="background-video">
         <source src={stars} type="video/mp4 " />
       </video>
@@ -39,10 +39,13 @@ export function  HomePage () {
         <div className="home gradient-wrapper">
           <div className="home-left glass move ">
             <div className="slide-down">
-              <h1>Hi! </h1>
+              <h1 className=" text-[3.2rem] ">Hi!</h1><br/>
+               I'm
+              <h1 className=" inline text-[2rem]"> Marcin</h1>
               <p className=" inline welcome-p ">
-                I'm a Full-Stack Developer passionate about building interactive
-                and responsive web applications.
+                , a Full-Stack Developer<br />
+                Developer passionate about building interactive and responsive web<br/> 
+                applications.
               </p>
             </div>
             <p className="slide-down-2 " >
@@ -74,7 +77,7 @@ export function  HomePage () {
             <h1 class="slide-down text-[3rem] " >ABOUT</h1>
             <p className="slide-down-2">
               <p className="text-[1.3rem]  pt-10">
-                <h1 className="inline text-[2rem] ">Hi!</h1> I’m <h1 className="inline inline text-[2rem]">Marcin</h1>,a Full-Stack Developer<br />
+
                 I build <i>responsive, interactive</i> web applications from front-end to back-end.
                 <div>
                   <u>What I offer:</u> <i>clean, intuitive</i> UI with
