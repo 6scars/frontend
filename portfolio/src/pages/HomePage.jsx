@@ -3,7 +3,7 @@ import amazonIcon from "./images/amazon-simple.svg";
 import gitIcon from "./images/github-icon.svg"
 import stars from "./images/stars.mp4";
 
-export function HomePage() {
+export function  HomePage () {
   const goToAmazon = () => {
     window.location.href = "/amazon-clone/public/amazon.html";
   };
@@ -15,6 +15,7 @@ export function HomePage() {
 
   return (
     <>
+    <div className="intro" ><p className="intro-text" >Marcin Michon Dev</p></div>
       <video autoPlay muted loop id="background-video">
         <source src={stars} type="video/mp4 " />
       </video>
