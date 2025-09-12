@@ -198,6 +198,7 @@ header a:hover {
   @apply h-[50vh] 
 }
 
+
 .home .home-left p {
   @apply text-left pb-10 mt-20;
 }
