@@ -14,149 +14,127 @@ export function HomePage() {
 
   return (
     <>
-      <div className="intro">
+      {/* Intro overlay */}
+      <div className="intro flex items-center justify-center fixed inset-0 z-10">
         <p className="intro-text">Marcin Michon Dev</p>
       </div>
-      <video autoPlay muted loop id="background-video">
-        <source src={stars} type="video/mp4 " />
+
+      {/* Background video */}
+      <video autoPlay muted loop id="background-video" className="fixed inset-0 w-full h-full object-cover z-0">
+        <source src={stars} type="video/mp4" />
       </video>
-      <header className="glass move">
-        <a className="shine-links" href="#about">
-          {" "}
-          About
-        </a>
 
-        <a className="shine-links" href="#contact">
-          {" "}
-          Contact
-        </a>
-
-        <a className="shine-links" href="#projects">
-          {" "}
-          Projects
-        </a>
+      {/* Header */}
+      <header className="glass move flex justify-end items-center h-[2.9rem] w-full">
+        {["About", "Contact", "Projects"].map((link) => (
+          <a key={link} className="shine-links flex items-center justify-center mx-4 min-w-[5rem] h-full transition-transform duration-300 ease-linear hover:scale-105">
+            {link}
+          </a>
+        ))}
       </header>
-      <main>
-        <div className="home gradient-wrapper">
-          <div className="home-left glass move ">
+
+      <main className="w-full">
+        {/* Home section */}
+        <div className="home gradient-wrapper flex flex-col md:flex-row gap-5 justify-center min-h-[95vh] p-3">
+          {/* Left side */}
+          <div className="home-left glass move flex-2 p-10 text-shadow-white/50 shadow-white/90">
             <div className="slide-down mb-10">
-              <h1 className=" text-[3.2rem] tracking-[0.2rem]">WELCOME!</h1>
-              <br />
-              I'm
-              <h1 className=" inline text-[2rem]"> Marcin</h1>
-              <p className=" inline welcome-p ">
-                , a Full-Stack Developer
-                <br />
-                Developer passionate about building interactive and responsive
-                web
-                <br />
+              <h1 className="text-[4rem] tracking-[0.2rem] font-bold">WELCOME!</h1>
+              <p className="text-[2rem] inline">I'm Marcin</p>
+              <p className="inline welcome-p">
+                , a Full-Stack Developer<br/>
+                passionate about building interactive and responsive web<br/>
                 applications.
               </p>
             </div>
 
-            <div className="devider  border-b-1 border-gray-800 w-full shadow-[0_0_10px_20px_rgba(0,0,0,0.20)]"></div>
-            <p className="slide-down-2 explication-specialize"> SPECIALIZED </p>
-            <div className="specialize flex justify-evenly h-auto text-3xl    ">
-              <div className=" specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 pl-[2rem] pr-[2rem] pt-[1.5rem] pb-[1.5rem]">
-                <p className="specialize-frontend-title">FRONT END</p>
-                <div className="devider border-b-1 border-gray-800 w-full"></div>
-                <ul className="list-disc list-inside text-left ">
-                  <li className="text-2xl leading-[3.5rem] ">JavaScript</li>
-                  <li className="text-2xl leading-[4rem]">HTML</li>
-                  <li className="text-2xl leading-[4rem]">React</li>
-                  <li className="text-2xl leading-[4rem]">Tailwind</li>
+            <div className="devider border-b border-gray-800 shadow-[0_0_10px_20px_rgba(0,0,0,0.2)] w-full"></div>
+
+            <p className="explication-specialize slide-down-2 text-2xl text-center mt-20 mb-10">SPECIALIZED IN</p>
+
+            <div className="specialize flex flex-col md:flex-row justify-evenly gap-5 text-3xl">
+              {/* Frontend */}
+              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+                <p className="specialize-frontend-title text-xl font-semibold mb-2">FRONT END</p>
+                <div className="devider border-b border-gray-800 w-full mb-2"></div>
+                <ul className="list-disc list-inside text-left space-y-2">
+                  {["JavaScript", "HTML", "React", "Tailwind"].map((tech) => (
+                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
+                  ))}
                 </ul>
               </div>
 
-              <div className=" specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 pl-[2rem] pr-[2rem] pt-[1.5rem] pb-[1.5rem]">
-                <p className="specialize-frontend-title">BACK END</p>
-                <div className="devider border-b-1 border-gray-800 w-full"></div>
-                <ul className="list-disc list-inside text-left ">
-                  <li className="text-2xl leading-[3.5rem] ">Node.js</li>
-                  <li className="text-2xl leading-[4rem]">Express</li>
-                  <li className="text-2xl leading-[4rem]">MongoDB</li>
-                  <li className="text-2xl leading-[4rem]">MySQL</li>
+              {/* Backend */}
+              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+                <p className="specialize-frontend-title text-xl font-semibold mb-2">BACK END</p>
+                <div className="devider border-b border-gray-800 w-full mb-2"></div>
+                <ul className="list-disc list-inside text-left space-y-2">
+                  {["Node.js", "Express", "MongoDB", "MySQL"].map((tech) => (
+                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
+                  ))}
                 </ul>
               </div>
             </div>
           </div>
-          <div className="home-right">
-            <div className="home-right-image glass move">
-              <img className="profile-photo" src={profile} alt="profile" />
+
+          {/* Right side */}
+          <div className="home-right flex-1 flex flex-col gap-5">
+            {/* Profile image */}
+            <div className="home-right-image glass move h-[50vh] shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]">
+              <img className="profile-photo w-full h-full object-cover" src={profile} alt="profile" />
             </div>
-            <div className="home-right-contact glass move">
-              <h1 class="slide-down block">Contact</h1>
-              <h1 class="slide-down  block"> & Social</h1>
-              <a href="https://github.com/6scars">
-                <div className="contact-link github-link">
-                  <img
-                    className="h-10 w-10 inline"
-                    src={gitIcon}
-                    alt="github"
-                  />
-                  <p className="inline ">GITHUB</p>
-                </div>
+
+            {/* Contact */}
+            <div className="home-right-contact glass move p-4 shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]">
+              <h2 className="slide-down">Contact & Social</h2>
+              <a href="https://github.com/6scars" className="contact-link flex items-center gap-2 mt-2">
+                <img className="h-10 w-10" src={gitIcon} alt="github" />
+                <span>GITHUB</span>
               </a>
-              <p>marcin.michon6@o2.pl</p>
+              <p className="mt-2">marcin.michon6@o2.pl</p>
             </div>
           </div>
         </div>
-        <div className="home-desc gradient-wrapper">
-          <div id="about" className="home-left glass move">
-            <h1 class="slide-down text-[3rem] ">ABOUT</h1>
-            <p className="slide-down-2">
-              <p className="text-[1.3rem]  pt-10">
-                I build <i>responsive, interactive</i> web applications from
-                front-end to back-end.
-                <div>
-                  <u>What I offer:</u> <i>clean, intuitive</i> UI with
-                </div>
-              </p>
-              <ul>
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>Tailwind CSS</li>
-                <li>HTML/CSS</li>
-              </ul>
 
-              <p className="text-[1.2rem] pt-10">
-                Robust APIs and database management with
-              </p>
-              <ul>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>MySQL Deployment</li>
-              </ul>
-              <p className="pt-10">
-                <p className=" text-[1.5rem] mb-5">
-                  I Have <u>experience</u> with <b>deploying</b>
-                  <br /> <i>scalable</i> apps on <i>Vercel or Render </i>
-                  <i>creative, efficient</i> solutions for real-world challenges
-                </p>
-                <p className="text-[1.5rem] ">
-                  I deliver complete applications
-                  <br /> combining <b>good</b> design,
-                  <i>functionality, and performance.</i>
-                </p>
-              </p>
+        {/* About & Projects */}
+        <div className="home-desc gradient-wrapper flex flex-col md:flex-row gap-5 w-full justify-center mt-10">
+          {/* About */}
+          <div id="about" className="home-left glass move2 flex-1 p-6">
+            <h2 className="slide-down text-3xl font-bold mb-4">ABOUT</h2>
+            <p className="text-[1.3rem] pt-4">
+              I build <i>responsive, interactive</i> web applications from front-end to back-end.
+              <br/><u>What I offer:</u> <i>clean, intuitive</i> UI
             </p>
-
-            <p></p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              {["React", "JavaScript", "Tailwind CSS", "HTML/CSS"].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="text-[1.2rem] pt-4">
+              Robust APIs and database management with:
+            </p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              {["Node.js", "Express", "MongoDB", "MySQL Deployment"].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="text-[1.5rem] pt-4">
+              I have <u>experience</u> with <b>deploying</b> <i>scalable</i> apps on <i>Vercel or Render</i> and delivering <i>creative, efficient</i> solutions.
+            </p>
           </div>
-          <div id="projects" className="home-right glass move">
-            <h3>PROJECTS</h3>
-            <button className="amazon-button" onClick={goToAmazon}>
-              <img
-                className="h-[2rem] inline"
-                alt="amazon-icon"
-                src={amazonIcon}
-              />
+
+          {/* Projects */}
+          <div id="projects" className="home-right glass move2 flex-1 p-6 flex flex-col items-start gap-4">
+            <h2 className="text-2xl font-bold">PROJECTS</h2>
+            <button className="amazon-button flex items-center gap-2 p-2 rounded-md border-1" onClick={goToAmazon}>
+              <img className="h-8 w-8" alt="amazon-icon" src={amazonIcon}  />
+              <span>Amazon Clone</span>
             </button>
           </div>
         </div>
       </main>
-      <footer>made by Marcin</footer>
+
+      <footer className="text-center py-4">made by Marcin</footer>
     </>
   );
 }

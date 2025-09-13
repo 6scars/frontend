@@ -1,295 +1,192 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*-------------------- ROOT VARIABLES --------------------*/
+:root {
+  --main-color: hsl(240, 37%, 7%);
+  --main-color2: hsl(240, 37%, 98%);
+  --secondary-color-text: hsl(240, 37%, 90%);
+  --secondary-color2: hsl(240, 37%, 17%);
+  --secondary-color3: hsl(240, 37%, 27%);
+  --secondary-color4: hsl(240, 37%, 47%);
+}
+
+/*-------------------- BODY --------------------*/
+body {
+  @apply flex flex-col items-center w-screen h-screen m-0 pt-2;
+  color: var(--secondary-color-text);
+  font-family: 'Unna', serif;
+  background-size: 400% 400%;
+}
+
+/*-------------------- BACKGROUND VIDEO --------------------*/
+#background-video {
+  @apply fixed top-0 left-0 w-full h-full object-cover z-0;
+}
+
+/*-------------------- GLASS COMPONENT --------------------*/
 @layer components {
   .glass {
-    @apply p-3 bg-white/10 backdrop-blur-md shadow-lg rounded-2xl backdrop-saturate-150 ring-1 ring-white/50 bg-gradient-to-b from-black/20 to-white/20;
+    @apply p-3 bg-white/10 backdrop-blur-md shadow-lg rounded-2xl ring-1 ring-white/50 bg-gradient-to-b from-black/20 to-white/20;
   }
-}
 
-:root {
-  --main-color: HSL(240, 37%, 7%);
-  --main-color2: HSL(240, 37%, 98%);
-  --secound-color-text: HSL(240, 37%, 90%);
-  --secound-color2: HSL(240, 37%, 17%);
-  --secound-color3: HSL(240, 37%, 27%);
-}
-
-@layer components {
   .move {
-    background: linear-gradient(-45deg,
-        var(--secound-color3),
-        var(--secound-color2),
-        var(--main-color),
-        #00000035,
-        #00000000,
-        #00000000);
-    background-size: 200%;
-    animation: gradientMove 10s ease infinite;
-  }
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gradient-wrapper {
-  position: relative;
-}
-
-.gradient-wrapper::before:has() {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-45deg,
-      var(--secound-color3),
-      var(--secound-color2),
+    background: linear-gradient(
+      -45deg,
+      red,
+      var(--secondary-color4),
+      var(--secondary-color2),
       var(--main-color),
       #00000035,
       #00000000,
-      #00000000);
-  background-size: 200%;
-  animation: gradientMove 10s ease infinite;
-  pointer-events: none;
-  z-index: 0;
+      #00000000
+    );
+    background-size: 200%;
+    animation: gradientMove 10s ease infinite;
+  }
+
+    .move2 {
+    background: linear-gradient(
+      -45deg,
+      var(--secondary-color2),
+      var(--main-color),
+      #0400004b,
+      #00000000,
+      #00000000
+    );
+    background-size: 200%;
+    animation: gradientMove 10s ease infinite;
+  }
+
+
+  .shine-links {
+    @apply relative overflow-hidden transition-colors duration-700;
+  }
+
+  .shine-links::before {
+    @apply content-[""] absolute left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg] rounded-md transition-all duration-700;
+  }
+
+  .shine-links:hover::before {
+    @apply left-[100%] bg-white/50;
+  }
 }
 
-.gradient-wrapper .glass {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+/*-------------------- GRADIENT ANIMATIONS --------------------*/
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.shine-links {
-  @apply relative overflow-hidden
-}
-
-.shine-links::before {
-  @apply content-[""] left-[-100%] w-full h-full absolute bg-white/10 rounded-md bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20] transition-all duration-700;
-
-}
-
-.shine-links:hover:before {
-  @apply left-[100%] bg-white/50 size-109
-}
-
-
-
-#root {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-body {
-  padding-top: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100vw;
-  /* zamiast wh */
-  height: 100vh;
-  margin: 0;
-
-  background-size: 400% 400%;
-
-  color: var(--secound-color-text);
-  font-family: "Unna";
-}
-
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 0;
-}
-
-h1 {
-  @apply font-bold inline;
-}
-
-/*--------------------------HEADER--------------------------*/
-
-header {
-  @apply h-[2.9rem] h-[2.9rem] w-full box-border flex justify-end items-center text-[var(--main-color1)];
-}
-
-header a {
-  @apply flex justify-center items-center mx-4 min-w-20 h-full shadow-xs shadow-white rounded-full bg-white/1 backdrop-blur-sm ring-white/50 bg-gradient-to-tl from-white/20 to-white/5 transition-colors duration-300 ease-linear transition-transform;
-}
-
-header a:hover {
-  @apply text-white scale-101;
-}
-
-/*--------------------------MAIN--------------------------*/
-
-/*---------- home ----------*/
-.home {
-  @apply w-full text-shadow-white/50 text-shadow-[0_5px_25px] flex gap-5 justify-center min-h-[95vh] box-border p-3 ;
-  
-}
-
-.home .home-left {
-  @apply text-5xl flex-[2] box-border p-10 text-xl  shadow-white/90 shadow-[0px_0px_5px_1px] 
-}
-
-.home .home-right {
-  @apply flex-[1] h-[100vh] box-border flex gap-5 flex-col  ;
-}
-
-
-.home-right-contact{
-  @apply  shadow-white/90 shadow-[0px_0px_5px_1px]
-}
-.contact-link {
-  @apply cursor-pointer rounded-md bg-black ring
-}
-
-.home-right-image,
-.home-right-contact {
-  @apply h-[50vh] shadow-white/90 shadow-[0px_0px_5px_1px]
-}
-
-
-.home .home-left p {
-  @apply text-left  p-1
-}
-.explication-specialize{
-  @apply mt-20 mb-10
-}
-
-
-.welcome-p {
-  @apply  text-2xl text-[var(--secound-color-text)];
-}
-
-.profile-photo {
-  @apply w-full h-full object-cover;
-}
-
+/*-------------------- SLIDE DOWN ANIMATION --------------------*/
 @keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
-
 
 .slide-down {
   @apply opacity-0 will-change-transform;
-  animation: slideDown 1.5s cubic-bezier(.20, .9, .40, 1) 0.2s forwards
+  animation: slideDown 1.5s cubic-bezier(.2,.9,.4,1) 0.2s forwards;
 }
 
 .slide-down-2 {
   @apply opacity-0 will-change-transform;
-  animation: slideDown 1s cubic-bezier(.20, .9, .40, 1) 1s forwards
+  animation: slideDown 1s cubic-bezier(.2,.9,.4,1) 1s forwards;
 }
 
-/*-----------intro---------------*/
+/*-------------------- HEADER --------------------*/
+header {
+  @apply flex justify-end items-center w-full h-[2.9rem];
+}
 
+header a {
+  @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105;
+}
+
+/*-------------------- HOME --------------------*/
+.home {
+  @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90;
+}
+
+.home-left, .home-right {
+  @apply flex flex-col gap-5;
+}
+
+.home-left {
+  @apply flex-2 p-10;
+}
+
+.home-right {
+  @apply flex-1;
+}
+
+.specialize {
+  @apply flex flex-col md:flex-row justify-evenly gap-5 text-3xl;
+}
+
+.specialize-frontend {
+  @apply shadow-lg bg-black/67 border-3 rounded-[8%] border-black/90 p-6;
+}
+
+.specialize-frontend-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+/*-------------------- LISTS --------------------*/
+ul {
+  @apply list-disc list-inside text-left space-y-2;
+}
+
+/*-------------------- CONTACT --------------------*/
+.contact-link {
+  @apply flex items-center gap-2 mt-2 cursor-pointer rounded-md p-2;
+}
+
+/*-------------------- PROJECTS ------------------*/
+.amazon-button{
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-image: 
+    linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0)),
+    linear-gradient(90deg,red,blue,yellow);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 0.4rem 1rem; /* kontroluj grubość 'borda' przez padding i border */
+
+  background-size:100% 100% ,300% 100%;
+  background-position: 0% 0%, 0% 50%;
+  animation: borderGradient 4s ease infinite;
+  cursor:pointer;
+}
+@keyframes borderGradient {
+  0%   { background-position: 0% 0%, 0% 50%; }
+  50%  { background-position: 0% 0%, 100% 50%; }
+  100% { background-position: 0% 0%, 0% 50%; }
+}
+
+
+
+/*-------------------- FOOTER --------------------*/
+footer {
+  @apply text-center py-4;
+}
+
+/*-------------------- INTRO OVERLAY --------------------*/
+.intro {
+  @apply fixed inset-0 z-10 flex items-center justify-center; 
+  background: linear-gradient(0deg, black, var(--main-color), red);
+  background-size: 400% 400%;
+  animation: movingColors 3s cubic-bezier(0.25,0.1,0.25,1) forwards;
+}
 
 @keyframes movingColors {
-  0% {
-    background-position: 0% 50%;
-    opacity:1;
-
-  }
-
-  50% {
-    background-position: 50% 100%;
-    opacity:1;
-  }
-
-  90%{
-    opacity:1;
-  }
-  100%{
-    background-position: 0% 50%;
-    opacity:0;
-      visibility: hidden;
-  }
-
-
+  0% { background-position: 0% 50%; opacity:1; }
+  50% { background-position: 50% 100%; opacity:1; }
+  80% { opacity:1; }
+  100% { background-position: 0% 50%; opacity:0; visibility:hidden; }
 }
-
-@keyframes droptop{
-  from {
-    transform: translateY(20px); opacity:0; font-size:1rem ;
-    
-  }
-  to {
-    transform: translateY(0); opacity:1; font-size: 1.2rem;
-  }
-}
-
-.intro {
-  display:flex;
-  justify-content:center;
-  align-items: center;
-
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  background: linear-gradient(0,black, var(--main-color),red , red);
-  background-size:400% 400%;
-  animation: movingColors 3s cubic-bezier(1,0.2,0.4,1) 0.1s forwards
-}
-
-.intro .intro-text{
-  opacity:0;
-  font-size: 0.5rem;
-  animation: droptop 1s cubic-bezier(1,0.8,0.1,1) 0.1s forwards;
-}
-
-
-/*---------- home-desc ----------*/
-
-.home-desc {
-  @apply w-full flex justify-center ;
-}
-
-.home-desc .home-left {
-  @apply flex-5 m-2 pb-10 text-shadow-white/50 text-shadow-[0_5px_25px] shadow-white/90 shadow-[0px_0px_5px_1px] ;
-}
-
-.home-desc .home-right {
-  @apply flex-1 m-2 flex flex-col justify-start flex-col shadow-white/90 shadow-[0px_0px_5px_1px] ;
-}
-
-.home-desc button {
-  @apply m-5 rounded-md max-h-13 flex justify-center items-center bg-orange-800/30 backdrop-blur-md shadow-lg rounded-2xl backdrop-saturate-150 ring-1 ring-orange-700/40 bg-gradient-to-b from-yellow-500/90 to-orange-500/100;
-}
-
-.amazon-button:hover {
-  @apply bg-blue-800 cursor-pointer;
-}
-
-/*--------------------------FOOTER--------------------------*/
