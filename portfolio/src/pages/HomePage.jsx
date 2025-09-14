@@ -27,7 +27,7 @@ export function HomePage() {
       {/* Header */}
       <header className="glass move flex justify-end items-center h-[2.9rem] w-full">
         {["About", "Contact", "Projects"].map((link) => (
-          <a key={link} className="shine-links flex items-center justify-center mx-4 min-w-[5rem] h-full transition-transform duration-300 ease-linear hover:scale-105">
+          <a key={link} className="shine-links cursor-pointer flex items-center justify-center mx-4 min-w-[5rem] h-full transition-transform duration-300 ease-linear hover:scale-105">
             {link}
           </a>
         ))}
@@ -42,38 +42,20 @@ export function HomePage() {
               <h1 className="text-[4rem] tracking-[0.2rem] font-bold">WELCOME!</h1>
               <p className="text-[2rem] inline">I'm Marcin</p>
               <p className="inline welcome-p">
-                , a Full-Stack Developer<br/>
-                passionate about building interactive and responsive web<br/>
+                , a Full-Stack Developer<br />
+                passionate about building interactive and responsive web<br />
                 applications.
               </p>
             </div>
 
             <div className="devider border-b border-gray-800 shadow-[0_0_10px_20px_rgba(0,0,0,0.2)] w-full"></div>
 
-            <p className="explication-specialize slide-down-2 text-2xl text-center mt-20 mb-10">SPECIALIZED IN</p>
-
+            <p className="explication-specialize slide-down-2 text-2xl text-center mt-20 mb-10">SPECIALIZED</p>
+            <p>I’m a Full-stack developer specializing in scalable web applications. I create clear, accessible interfaces, optimize performance, and help users reach their goals faster.</p>
             <div className="specialize flex flex-col md:flex-row justify-evenly gap-5 text-3xl">
-              {/* Frontend */}
-              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
-                <p className="specialize-frontend-title text-xl font-semibold mb-2">FRONT END</p>
-                <div className="devider border-b border-gray-800 w-full mb-2"></div>
-                <ul className="list-disc list-inside text-left space-y-2">
-                  {["JavaScript", "HTML", "React", "Tailwind"].map((tech) => (
-                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
-                  ))}
-                </ul>
-              </div>
 
-              {/* Backend */}
-              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
-                <p className="specialize-frontend-title text-xl font-semibold mb-2">BACK END</p>
-                <div className="devider border-b border-gray-800 w-full mb-2"></div>
-                <ul className="list-disc list-inside text-left space-y-2">
-                  {["Node.js", "Express", "MongoDB", "MySQL"].map((tech) => (
-                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
-                  ))}
-                </ul>
-              </div>
+
+
             </div>
           </div>
 
@@ -96,38 +78,72 @@ export function HomePage() {
           </div>
         </div>
 
-        {/* About & Projects */}
+        {/*About*/}
         <div className="home-desc gradient-wrapper flex flex-col md:flex-row gap-5 w-full justify-center mt-10">
-          {/* About */}
           <div id="about" className="home-left glass move2 flex-1 p-6">
             <h2 className="slide-down text-3xl font-bold mb-4">ABOUT</h2>
+            My name is [Name] and I’ve been building websites and web applications for [X] years. I combine clean design with robust engineering — I craft interfaces that not only look good but are fast, accessible, and easy to use. I primarily work with [React / Vue / Svelte] and TypeScript, and focus on performance (code-splitting, lazy loading) and reliable testing.
+            {/* Frontend */}
+            <div className=" shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+
+              <div className="devider border-b border-gray-800 w-full mb-2"></div>
+              <p>I follow a user-centered process: understand the users and business goals, create prototypes, iterate with feedback, and deliver stable deployments. I collaborate closely with UX designers, backend engineers, and product owners to turn requirements into usable features. When needed, I also handle SEO improvements and Core Web Vitals optimizations.</p>
+            </div>
+            {/* Backend */}
+            <div className="shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+
+              <div className="devider border-b border-gray-800 w-full mb-2"></div>
+              <p>I value maintainable code: modular components, clear documentation, and automated tests help teams ship features faster and with fewer regressions. I’m open to full-time roles or freelance collaborations where I can impact product quality and user experience.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Technical & Projects */}
+        <div className="home-desc gradient-wrapper flex flex-col md:flex-row gap-5 w-full justify-center mt-10">
+          {/* Technical */}
+          <div id="about" className="home-left glass move2 flex-1 p-6">
+            <h2 className="slide-down text-3xl font-bold mb-4">Technical</h2>
             <p className="text-[1.3rem] pt-4">
               I build <i>responsive, interactive</i> web applications from front-end to back-end.
-              <br/><u>What I offer:</u> <i>clean, intuitive</i> UI
+              <br /><u>With The Help Of</u>
             </p>
-            <ul className="list-disc list-inside mt-2 space-y-1">
-              {["React", "JavaScript", "Tailwind CSS", "HTML/CSS"].map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="text-[1.2rem] pt-4">
-              Robust APIs and database management with:
-            </p>
-            <ul className="list-disc list-inside mt-2 space-y-1">
-              {["Node.js", "Express", "MongoDB", "MySQL Deployment"].map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+
+            {/*Frontend And Backend*/}
+            <div className="flex justify-evenly">
+              {/* Frontend */}
+              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+                <p className="specialize-frontend-title text-xl font-semibold mb-2">FRONT END</p>
+                <div className="devider border-b border-gray-800 w-full mb-2"></div>
+                <ul className="list-disc list-inside text-left space-y-2">
+                  {["JavaScript", "HTML", "React", "Tailwind"].map((tech) => (
+                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
+                  ))}
+                </ul>
+              </div>
+              {/* Backend */}
+              <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
+                <p className="specialize-frontend-title text-xl font-semibold mb-2">BACK END</p>
+                <div className="devider border-b border-gray-800 w-full mb-2"></div>
+                <ul className="list-disc list-inside text-left space-y-2">
+                  {["Node.js", "Express", "MongoDB", "MySQL"].map((tech) => (
+                    <li key={tech} className="text-2xl leading-[3.5rem]">{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
             <p className="text-[1.5rem] pt-4">
               I have <u>experience</u> with <b>deploying</b> <i>scalable</i> apps on <i>Vercel or Render</i> and delivering <i>creative, efficient</i> solutions.
             </p>
-          </div>
+          </div>a
 
           {/* Projects */}
           <div id="projects" className="home-right glass move2 flex-1 p-6 flex flex-col items-start gap-4">
-            <h2 className="text-2xl font-bold">PROJECTS</h2>
+            <h2 className="slide-down">Projects </h2>
             <button className="amazon-button flex items-center gap-2 p-2 rounded-md border-1" onClick={goToAmazon}>
-              <img className="h-8 w-8" alt="amazon-icon" src={amazonIcon}  />
+              <img className="h-8 w-8" alt="amazon-icon" src={amazonIcon} />
               <span>Amazon Clone</span>
             </button>
           </div>
