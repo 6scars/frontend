@@ -21,6 +21,7 @@
 body {
   @apply flex flex-col items-center w-screen min-h-screen m-0 pt-2;
   color: var(--secondary-color-text);
+  overflow-x:hidden;
   font-family: 'Unna', serif;
   background-size: 400% 400%;
 }
@@ -222,10 +223,10 @@ ul {
 
 /*-------------------- FOOTER --------------------*/
 footer {
-  @apply relative text-white text-center p-[1rem] w-[100vw]
+  @apply relative text-white text-center p-[1rem] w-[90vw]
   border-t-3 border-l-3 border-r-3 rounded-xs border-transparent;
   box-shadow: 0 0 10px white;
-
+  box-sizing: border-box;
   background-image: linear-gradient(black, black), linear-gradient( rgb(132, 132, 132),rgb(3, 3, 3));
   background-origin: border-box;
   background-clip: padding-box, border-box;
