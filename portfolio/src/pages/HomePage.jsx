@@ -81,9 +81,9 @@ export function HomePage() {
           {/* Right side */}
           <div className="home-right flex-1 flex flex-col gap-5">
             {/* Profile image */}
-            <div className="home-right-image glass move h-[50vh] shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]">
+            <div className="home-right-image  glass move h-[50vh] shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]">
               <img
-                className="profile-photo w-full h-full object-cover"
+                className="profile-photo  object-left w-full h-full object-cover rounded-md"
                 src={profile}
                 alt="profile"
               />
