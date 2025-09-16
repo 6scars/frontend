@@ -5,7 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+  overflow-x: hidden;
+}
+body{
+  padding:0;
+}
 
 /*-------------------- ROOT VARIABLES --------------------*/
 :root {
