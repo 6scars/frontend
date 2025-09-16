@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 
+
 /*-------------------- ROOT VARIABLES --------------------*/
 :root {
   --main-color: hsl(240, 37%, 7%);
@@ -173,7 +174,7 @@ ul {
   border-radius: 8px;
   background-image:
     linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-    linear-gradient(90deg, red, blue, yellow);
+    linear-gradient(90deg, red, blu, yellow);
   background-origin: padding-box;
   background-clip: padding-box, border-box;
   padding: 0.4rem 1rem;
@@ -234,10 +235,10 @@ footer {
 
 /*-------------------- INTRO OVERLAY --------------------*/
 .intro {
-  @apply fixed inset-0 z-10 flex items-center justify-center min-w-[100vw] min-h-[100vh];
+  @apply fixed inset-0 z-50 flex items-center justify-center;
   background: linear-gradient(0deg, black, var(--main-color), red);
   background-size: 400% 400%;
-  animation: movingColors 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: movingColors 3s cubic-bezier(0.25,0.1,0.25,1) forwards;
 }
 
 @keyframes movingColors {
