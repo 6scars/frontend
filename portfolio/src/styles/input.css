@@ -234,7 +234,7 @@ footer {
 
 /*-------------------- INTRO OVERLAY --------------------*/
 .intro {
-  @apply fixed inset-0 z-10 flex items-center justify-center;
+  @apply fixed inset-0 z-10 flex items-center justify-center min-w-[100vw] min-h-[100vh];
   background: linear-gradient(0deg, black, var(--main-color), red);
   background-size: 400% 400%;
   animation: movingColors 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
