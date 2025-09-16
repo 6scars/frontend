@@ -13,7 +13,7 @@ export function Projects() {
                 <h2 className="slide-down">Projects </h2>
             </div>
             <div className="flex items-center jutify-start">
-                <div className="relative group flex items-center">
+                <div className="relative group flex items-center ">
                     <button
                         className="amazon-button flex items-center gap-2 p-2 rounded-md border-1"
                         onClick={goToAmazon}
@@ -26,7 +26,7 @@ export function Projects() {
                         <span>Amazon Clone</span>
                     </button>
                     <p>🔵</p>
-                    <div className="project-informations">
+                    <div className="project-informations absolute bottom-full p-2 opacity-0 border-1 bg-gray-800 rounded-md group-hover:opacity-100">
                         {" "}
                         The project may loading up to 1 min cause of free render.com
                         plan
