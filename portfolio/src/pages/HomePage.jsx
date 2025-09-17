@@ -10,7 +10,7 @@ export function HomePage() {
     <>
       {/* Intro overlay */}
       <div className="intro flex items-center justify-center fixed inset-0 z-10">
-        <p className="intro-text">Marcin Michon Dev</p>
+        <p className="text-[1.2rem] max-md:text-[1rem] ">Marcin Michon Dev</p>
       </div>
 
       {/* Background video */}

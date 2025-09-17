@@ -6,11 +6,16 @@
 @tailwind utilities;
 
 
-html, body { margin: 0; overflow-x:hidden;width: 100%; }
-#root{
-  width: 100vw;
-}
 
+
+
+
+
+
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden; /* dodatkowy safety net na mobilki */
+}
 /*-------------------- ROOT VARIABLES --------------------*/
 :root {
   --main-color: hsl(240, 37%, 7%);
@@ -24,15 +29,17 @@ html, body { margin: 0; overflow-x:hidden;width: 100%; }
 
 /*-------------------- BODY --------------------*/
 body {
-  @apply flex flex-col items-center w-screen min-h-screen m-0 pt-2 ;
+  @apply flex flex-col items-center w-full min-h-screen m-0 pt-2;
   color: var(--secondary-color-text);
+  display:relative;
+  overflow-x:hidden;
   font-family: 'Unna', serif;
   background-size: 400% 400%;
 }
 
 /*-------------------- BACKGROUND VIDEO --------------------*/
 #background-video {
-  @apply fixed top-0 left-0 w-full h-full object-cover z-0;
+  @apply fixed top-0 left-0 w-screen h-full object-cover z-0;
 }
 
 /*-------------------- GLASS COMPONENT --------------------*/
@@ -125,7 +132,10 @@ header {
 }
 
 header a {
-  @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105;
+  @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105
+    max-[447px]:m-1
+  ;
+
 }
 
 /*-------------------- HOME --------------------*/
@@ -151,7 +161,7 @@ header a {
 }
 
 .specialize-frontend {
-  @apply shadow-lg bg-black/67 rounded-xl;
+  @apply shadow-lg bg-black/67 rounded-xl ;
   background-image:
     linear-gradient(black, black),
     linear-gradient(90deg, red, blue, yellow);
@@ -170,6 +180,11 @@ header a {
 /*-------------------- LISTS --------------------*/
 ul {
   @apply list-disc list-inside text-left space-y-2;
+}
+
+/*-------------------- About --------------------*/
+#About{
+  @apply max-sm:p-0
 }
 
 /*-------------------- CONTACT --------------------*/
@@ -227,10 +242,10 @@ ul {
 
 /*-------------------- FOOTER --------------------*/
 footer {
-  @apply relative text-white text-center p-[1rem] w-[100vw]
+  @apply relative text-white text-center p-[1rem] w-[90vw]
   border-t-3 border-l-3 border-r-3 rounded-xs border-transparent;
   box-shadow: 0 0 10px white;
-
+  box-sizing: border-box;
   background-image: linear-gradient(black, black), linear-gradient( rgb(132, 132, 132),rgb(3, 3, 3));
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -240,7 +255,7 @@ footer {
 
 /*-------------------- INTRO OVERLAY --------------------*/
 .intro {
-  @apply fixed inset-0 z-50 flex items-center justify-center;
+  @apply fixed inset-0 z-50 flex items-center justify-center ;
   background: linear-gradient(0deg, black, var(--main-color), red);
   background-size: 400% 400%;
   animation: movingColors 3s cubic-bezier(0.25,0.1,0.25,1) forwards;
