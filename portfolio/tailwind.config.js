@@ -1,15 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  safelist: ["contact"],
+  safelist: [],
   theme: {
-    extend: {
-      
-    },
+    extend: {},
     screens: {
-      'md-832':'832px',
-      'max-md-832': {max: '831px'}
+      xs523: "523px",
+      maxXs523: { max: "522px" },
+
+      md832: "832px",
+      maxMd832: { max: "831px" }
     }
   },
   plugins: [],
-}
+};

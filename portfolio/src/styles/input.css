@@ -131,7 +131,10 @@ header {
 }
 
 header a {
-  @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105;
+  @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105
+    max-[447px]:m-1
+  ;
+
 }
 
 /*-------------------- HOME --------------------*/
@@ -157,7 +160,7 @@ header a {
 }
 
 .specialize-frontend {
-  @apply shadow-lg bg-black/67 rounded-xl;
+  @apply shadow-lg bg-black/67 rounded-xl ;
   background-image:
     linear-gradient(black, black),
     linear-gradient(90deg, red, blue, yellow);
