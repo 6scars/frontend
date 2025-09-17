@@ -10,7 +10,7 @@ export function Projects() {
     return (
         <div
             id="Projects"
-            className="home-right glass move2 flex-1 p-6 flex flex-col items-start gap-4"
+            className="projects glass move2 flex-1 p-6 flex flex-col items-start gap-4"
         >
             <div>
                 <h2 className="slide-down">Projects </h2>

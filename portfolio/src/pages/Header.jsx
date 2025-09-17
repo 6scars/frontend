@@ -11,7 +11,7 @@ export function Header() {
           <a
             key={link}
             href={`#${link}`}
-            className="shine-links cursor-pointer flex items-center justify-center mx-4 min-w-[5rem] h-full transition-transform duration-300 ease-linear hover:scale-105 
+            className="link-button shine-links cursor-pointer flex items-center justify-center mx-4 min-w-[5rem] h-full transition-transform duration-300 ease-linear hover:scale-105 
             "
           >
             {link}

@@ -10,7 +10,7 @@ export function Technical() {
       </p>
 
       {/*Frontend And Backend*/}
-      <div className="flex justify-evenly max-[523px]:flex-col max-[523px]:gap-2">
+      <div className="flex justify-evenly gap-2 max-[523px]:flex-col max-[523px]:gap-2  max-[523px]:w-full">
         {/* Frontend */}
         <div className="specialize-frontend shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6">
           <p className="specialize-frontend-title text-xl font-semibold mb-2">

@@ -1,6 +1,5 @@
 import profile from "../images/img.jpg";
 import gitIcon from "../images/github-icon.svg";
-import { Footer } from "../Footer";
 
 export function HomeSection() {
   return (
@@ -10,14 +9,13 @@ export function HomeSection() {
         <div className="home-left glass move flex-2 p-10 text-shadow-white/50 shadow-white/90">
           <div className="slide-down mb-10">
             <h1
-              className="text-[4rem] tracking-[0.2rem] font-bold 
+              className="text-[4rem] tracking-[0.2rem] font-bold text-center
                         max-[523px]:text-[3rem] max-[423px]:text-[2.2rem]"
             >
               WELCOME!
             </h1>
             <p
-              className="text-[2rem] inline 
-                        max-[523px]:text-[1.2rem] max-[423px]:text-[1rem]"
+              className="ImMarcin"
             >
               I'm Marcin
             </p>
@@ -51,9 +49,9 @@ export function HomeSection() {
         {/* Right side */}
         <div className="home-right flex-1 flex flex-col gap-5">
           {/* Profile image */}
-          <div className="home-right-image  glass move h-[50vh] shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]">
+          <div className="home-right-image glass move ">
             <img
-              className="profile-photo  object-left w-full h-full object-cover rounded-md"
+              className="profile-photo  object-left w-full h-full object-cover rounded-md "
               src={profile}
               alt="profile"
             />
@@ -62,9 +60,9 @@ export function HomeSection() {
           {/* Contact */}
           <div
             id="Contact"
-            className="home-right-contact glass move p-4 shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]"
+            className="home-right-contact glass move"
           >
-            <h2 className="slide-down">Contact & Social</h2>
+            <h2 className="slide-down ">Contact & Social</h2>
             <a
               href="https://github.com/6scars"
               className="contact-link flex items-center gap-2 mt-2"

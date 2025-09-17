@@ -16,6 +16,12 @@ html, body, #root {
   max-width: 100%;
   overflow-x: hidden; /* dodatkowy safety net na mobilki */
 }
+
+#root{
+  @apply xl:px-[15%]
+}
+
+
 /*-------------------- ROOT VARIABLES --------------------*/
 :root {
   --main-color: hsl(240, 37%, 7%);
@@ -29,7 +35,7 @@ html, body, #root {
 
 /*-------------------- BODY --------------------*/
 body {
-  @apply flex flex-col items-center w-full min-h-screen m-0 pt-2;
+  @apply flex flex-col items-center w-full min-h-screen m-0 pt-2 ;
   color: var(--secondary-color-text);
   display:relative;
   overflow-x:hidden;
@@ -128,24 +134,33 @@ body {
 
 /*-------------------- HEADER --------------------*/
 header {
-  @apply flex justify-end items-center w-full h-[2.9rem];
+  @apply flex justify-end items-center w-full h-[2.9rem] ;
 }
+
 
 header a {
   @apply flex items-center justify-center mx-4 min-w-[5rem] h-full rounded-full shadow-xs shadow-white/10 bg-white/5 backdrop-blur-sm ring-white/50 transition-transform duration-300 ease-linear hover:scale-105
-    max-[447px]:m-1
+    max-[447px]:m-1 
   ;
 
 }
 
+
 /*-------------------- HOME --------------------*/
 .home {
-  @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90;
+  @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90 mb-10;
+}
+.welcome-p
+{
+  @apply text-center;
+}
+.ImMarcin{
+  @apply text-[2rem] inline  text-center max-[523px]:text-[1.2rem] max-[423px]:text-[1rem];
 }
 
 .home-left,
 .home-right {
-  @apply flex flex-col gap-5;
+  @apply flex flex-col justify-start items-center gap-5;
 }
 
 .home-left {
@@ -156,12 +171,13 @@ header a {
   @apply flex-1;
 }
 
+
 .specialize {
   @apply flex flex-col md:flex-row justify-evenly gap-5 text-3xl;
 }
 
 .specialize-frontend {
-  @apply shadow-lg bg-black/67 rounded-xl ;
+  @apply shadow-lg bg-black/67 rounded-xl p-6 ;
   background-image:
     linear-gradient(black, black),
     linear-gradient(90deg, red, blue, yellow);
@@ -177,15 +193,39 @@ header a {
   @apply text-xl font-semibold mb-2;
 }
 
+.home-right-image {
+  @apply  w-full p-5 h-[50vh] shadow-[0_0_5px_1px_rgba(255,255,255,0.9)] max-[914px]:h-[40%] ;
+}
+
+.home-right-contact{
+  @apply  w-[100%] p-4 shadow-[0_0_5px_1px_rgba(255,255,255,0.9)]
+}
+
 /*-------------------- LISTS --------------------*/
 ul {
   @apply list-disc list-inside text-left space-y-2;
 }
+/*-------------------- Home-desc ----------------*/
+.home-desc{
+ @apply mb-10
+}
 
-/*-------------------- About --------------------*/
 #About{
   @apply max-sm:p-0
 }
+
+.projects{
+  @apply flex-1 p-6;
+}
+
+.about-div-content{
+  @apply  shadow-[0_0_50px_20px_rgba(0,0,0,0.55)] bg-black/67 border-3 rounded-[8%] border-black/90 p-6 xl:max-w-[80%]  
+    max-xl:w-full;
+}
+
+
+
+
 
 /*-------------------- CONTACT --------------------*/
 .contact-link {
