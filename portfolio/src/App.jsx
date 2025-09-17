@@ -1,8 +1,7 @@
-import "./App.css";
 import { Mouse } from "./pages/Mouse.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Footer } from "./pages/Footer.jsx"
+import  MiniSpotify  from "../projects/mini-spotify/src/App.jsx"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -11,10 +10,11 @@ function App() {
         <Routes>
           <Route path="Mouse" element={<Mouse />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/mini-spotify" element ={<MiniSpotify />}
+          />
         </Routes>
       </Router>
-      
-      <Footer />
+
     </>
   );
 }

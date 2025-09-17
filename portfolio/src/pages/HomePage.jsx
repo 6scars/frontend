@@ -1,8 +1,8 @@
 import stars from "./images/stars.mp4";
-
 import {Header} from './Header.jsx'
 import {Main} from './Main/Main.jsx'
 import {Footer} from './Footer.jsx'
+import '../styles/input.css'
 
 export function HomePage() {
 
@@ -27,7 +27,8 @@ export function HomePage() {
       
       <Header />
       <Main />
-      
+            
+      <Footer />
     </>
   );
 }

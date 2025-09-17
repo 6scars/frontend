@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom"
 import amazonIcon from "../../images/amazon-simple.svg";
+
 export function Projects() {
+    const navigate = useNavigate();
     const goToAmazon = () => {
         window.location.href = "/amazon-clone/public/amazon.html";
     };
-    
+
     return (
         <div
             id="Projects"
@@ -30,6 +33,26 @@ export function Projects() {
                         {" "}
                         The project may loading up to 1 min cause of free render.com
                         plan
+                    </div>
+                </div>
+            </div>
+            <div className="flex items-center jutify-start">
+                <div className="relative group flex items-center ">
+                    <button
+                        className="amazon-button flex items-center gap-2 p-2 rounded-md border-1"
+                        onClick={()=>{navigate("/mini-spotify")}}
+                    >
+                        <img
+                            className="h-8 w-[0.2rem]"
+                            alt="amazon-icon"
+                            src={amazonIcon}
+                        />
+                        <span>Mini Spotify</span>
+                    </button>
+                    <p>🔴</p>
+                    <div className="project-informations absolute bottom-full p-2 opacity-0 border-1 bg-gray-800 rounded-md group-hover:opacity-100">
+                        {" "}
+                        IN Progress
                     </div>
                 </div>
             </div>
