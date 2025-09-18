@@ -1,9 +1,79 @@
-*{
+@import "tailwindcss";
+* {
+  margin: 0;
   padding: 0;
-  margin:0;
-  display:auto;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }
 
-#root{
-  width:100%;
+/*-----------------------VARIABLES-----------------------*/
+:root {
+  --height-of-header: 78px;
+  --width-of-left-bar: 96px;
+  --height-of-player: 120px;
+
+  --margin-bottom-header: 11px;
+  --margin-right-left-bar: 20px;
+  --padding-left-of-outer-borderline: 8px;
+}
+
+/*-----------------------PRESTYLES-----------------------*/
+:is(.leftBar, Header) {
+  left: var(--padding-left-of-outer-borderline);
+}
+
+
+/*-----------------------HEADER-----------------------*/
+Header{
+  height:var(--height-of-header);
+  right:var(--padding-left-of-outer-borderline)
+}
+
+
+/*-----------------------LEFTBAR-----------------------*/
+.leftBar{
+  width:var(--width-of-left-bar)
+}
+
+/*-----------------------MAIN---------------------------*/
+:root{
+  --padding-main-type:30px
+}
+/*-----main-type-----*/
+.main-type{
+  padding:var(--padding-main-type)
+}
+.main-type button{
+  @apply  border-1 rounded-full cursor-pointer;
+  background-color:red;
+  padding:10px;
+}
+
+/*-------main-songs-----*/
+.main-songs{
+  padding-left:var(--padding-main-type);
+  padding-right:var(--padding-main-type)
+}
+
+/*------playlist--------*/
+.playlist{
+  @apply bg-yellow-100 flex items-center ;
+  max-height:50px;
+}
+.playlist-image-container{
+  width:25%
+}
+.playlist-title{
+  width:75%
+}
+
+.playlist__image{
+  height:100%;
 }
