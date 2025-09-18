@@ -14,7 +14,7 @@ export default function MiniSpotify() {
       >
         {/* music */}
         <div
-          className="space-y-4 bg-amber-600 flex-[2] h-full min-w-[500px] overflow-y-auto  rounded-md
+          className="space-y-4 bg-amber-900 flex-[2] h-full min-w-[500px] overflow-y-auto  rounded-md
           relative
         "
         >
@@ -26,28 +26,102 @@ export default function MiniSpotify() {
             <button>PODCASTS</button>
           </div>
           <div className="main-songs ">
-            <div className="play-lists gap-10 grid grid-cols-3">
+            <div className="play-lists gap-2 grid grid-cols-3">
               {Array.from({ length: 4 }).map((_, i) => {
                 return (
                   <div key={i} className="playlist">
                     <div className="playlist-image-container">
                       <img
                         className="playlist__image"
-                        src={`mini-spotify/images/cat${i+1}.jpg`}
+                        src={`mini-spotify/images/cat${i + 1}.jpg`}
                       ></img>
                     </div>
-
-                    <div className="playlist-title">title</div>
+                    <div className="playlist-title-container">
+                      <p className="playlist__title">title</p>
+                    </div>
                   </div>
                 );
               })}
             </div>
 
             <div className="songs">
-              <div className="songs-title">Preapared for You</div>
-              <div className="song">
-                <img src="mini-spotify/images/cat1.jpg"></img>
-                <p className="authors">Oliver Francis, XXXtentacions</p>
+              <div className="songs-title-container text-white font-bold">
+                <p className="songs__title">Preapared for You</p>
+              </div>
+              <div className="songs-container bg-blue-500 h-full">
+                {Array.from({ length: 10 }).map(() => {
+                  return (
+                    <div className="song-container-outer flex justify-center">
+                      <div className="song-container-inner border-1 rounded-xl ">
+                        <div className="song-image-container h-[75%] ">
+                          <img
+                            className="song__image"
+                            src="mini-spotify/images/cat1.jpg"
+                          ></img>
+                        </div>
+                        <div className="authors-container  h-[25%] text-gray-700 font-bold flex items-center">
+                          <p className="authors">
+                            Oliver Francis, XXXtentacions
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="songs">
+              <div className="songs-title-container text-white font-bold">
+                <p className="songs__title">Preapared for You</p>
+              </div>
+              <div className="songs-container bg-blue-500 h-full">
+                {Array.from({ length: 10 }).map(() => {
+                  return (
+                    <div className="song-container-outer flex justify-center">
+                      <div className="song-container-inner border-1 rounded-xl ">
+                        <div className="song-image-container h-[75%] ">
+                          <img
+                            className="song__image"
+                            src="mini-spotify/images/cat1.jpg"
+                          ></img>
+                        </div>
+                        <div className="authors-container  h-[25%] text-gray-700 font-bold flex items-center">
+                          <p className="authors">
+                            Oliver Francis, XXXtentacions
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="songs">
+              <div className="songs-title-container text-white font-bold">
+                <p className="songs__title">Preapared for You</p>
+              </div>
+              <div className="songs-container bg-blue-500 h-full">
+                {Array.from({ length: 10 }).map(() => {
+                  return (
+                    <div className="song-container-outer flex justify-center">
+                      <div className="song-container-inner border-1 rounded-xl ">
+                        <div className="song-image-container h-[75%] ">
+                          <img
+                            className="song__image"
+                            src="mini-spotify/images/cat1.jpg"
+                          ></img>
+                        </div>
+                        <div className="authors-container  h-[25%] text-gray-700 font-bold flex items-center">
+                          <p className="authors">
+                            Oliver Francis, XXXtentacions
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
