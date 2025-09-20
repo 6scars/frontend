@@ -144,12 +144,11 @@ header a {
 /*--------------------MAIN----------------------*/
 main {
   @apply xl:px-[15%] 
-         max-[523px]:px-3 /* zmniejszony padding na małych ekranach */
+         max-[523px]:px-3 
          max-[523px]:relative 
          max-[523px]:top-[78px] 
-         max-[523px]:w-full; /* upewnij się, że nie wychodzi poza ekran */
+         max-[523px]:w-full; 
 }
-/*-------------------- HOME --------------------*/
 .home {
   @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90 mb-10 ;
 }
@@ -259,7 +258,6 @@ ul {
   background-origin: padding-box;
   background-clip: padding-box, border-box;
   padding: 0.4rem 1rem;
-  /* kontroluj grubość 'borda' przez padding i border */
 
   background-size: 100% 100%, 300% 100%;
   background-position: 0% 0%, 0% 50%;
@@ -281,9 +279,6 @@ ul {
   }
 }
 
-
-
-/*-------------------- FOOTER --------------------*/
 
 
 
