@@ -1,5 +1,6 @@
 {
     "rewrites":[
-        { "source": "/mini-spotify/:path*", "destination": "mini-spotify/index.html" }
+        { "source": "/mini-spotify/:path*", "destination": "/mini-spotify/index.html" },
+        { "source": "/(.*)", "destination":"index.html"}
     ]
 }
