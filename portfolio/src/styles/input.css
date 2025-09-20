@@ -145,10 +145,14 @@ header a {
 
 }
 
+/*--------------------MAIN----------------------*/
+main{
+  @apply max-[523px]:fixed max-[523px]:top-[78px];
+}
 
 /*-------------------- HOME --------------------*/
 .home {
-  @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90 mb-10;
+  @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90 mb-10 ;
 }
 .welcome-p
 {
