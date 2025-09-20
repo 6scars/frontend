@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*----------footer-root-----------*/
+
+footer {
+  @apply  relative text-white text-center p-[1rem] w-[100vw] h-[50px]
+  border-t-3 border-l-3 border-r-3 rounded-xs border-transparent;
+  box-shadow: 0 0 10px white;
+  box-sizing: border-box;
+  background-image: linear-gradient(black, black), linear-gradient( rgb(132, 132, 132),rgb(3, 3, 3));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+}
