@@ -1,10 +1,13 @@
-import { useNavigate } from "react-router-dom"
+
 import amazonIcon from "../../images/amazon-simple.svg";
 
 export function Projects() {
-    const navigate = useNavigate();
     const goToAmazon = () => {
         window.location.href = "/amazon-clone/public/amazon.html";
+    };
+
+        const goToMiniSpotify = () => {
+        window.location.href = "/mini-spotify";
     };
 
     return (
@@ -40,7 +43,7 @@ export function Projects() {
                 <div className="relative group flex items-center ">
                     <button
                         className="amazon-button flex items-center gap-2 p-2 rounded-md border-1"
-                        onClick={()=>{navigate("/mini-spotify")}}
+                        onClick={goToMiniSpotify}
                     >
                         <img
                             className="h-8 w-[0.2rem]"
