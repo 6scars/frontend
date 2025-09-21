@@ -15,6 +15,7 @@
 html, body, #root {
   max-width: 100%;
   overflow-x: hidden; /* dodatkowy safety net na mobilki */
+
 }
 
 /*-------------------- ROOT VARIABLES --------------------*/
@@ -40,7 +41,7 @@ body {
 
 /*-------------------- BACKGROUND VIDEO --------------------*/
 #background-video {
-  @apply fixed top-0 left-0 w-screen h-full object-cover z-0;
+  @apply fixed top-0 left-0 w-screen h-full object-cover z-0 bg-black;
 }
 
 /*-------------------- GLASS COMPONENT --------------------*/
@@ -143,21 +144,24 @@ header a {
 
 /*--------------------MAIN----------------------*/
 main {
-  @apply xl:px-[15%] 
+  @apply
+        mb-[100px]
+        xl:px-[15%] 
          max-[523px]:px-3 
          max-[523px]:relative 
          max-[523px]:top-[78px] 
          max-[523px]:w-full; 
+
 }
 .home {
   @apply w-full flex flex-col md:flex-row justify-center min-h-[95vh] gap-5 p-3 text-shadow-white/50 shadow-white/90 mb-10 ;
 }
 .welcome-p
 {
-  @apply text-center;
+  @apply text-center max-[344px]:text-xs;
 }
 .ImMarcin{
-  @apply text-[2rem] inline  text-center max-[523px]:text-[1.2rem] max-[423px]:text-[1rem];
+  @apply text-[2rem] inline  text-center max-[523px]:text-[1.2rem] max-[423px]:text-[1rem] max-[344px]:text-[0.9rem];
 }
 
 .home-left,

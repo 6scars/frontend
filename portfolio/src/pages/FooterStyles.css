@@ -11,8 +11,9 @@
 /*----------footer-root-----------*/
 
 footer {
-  @apply  relative text-white text-center p-[1rem] w-[100vw] h-[50px]
-  border-t-3 border-l-3 border-r-3 rounded-xs border-transparent;
+  @apply  relative text-white text-center p-[0.8rem] w-[100vw] h-[50px]
+  flex items-center justify-center
+  border-t-3 border-l-3 border-r-3 rounded-xs border-transparent max-[344px]:text-xs; 
   box-shadow: 0 0 10px white;
   box-sizing: border-box;
   background-image: linear-gradient(black, black), linear-gradient( rgb(132, 132, 132),rgb(3, 3, 3));

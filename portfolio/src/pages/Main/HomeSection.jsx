@@ -10,7 +10,7 @@ export function HomeSection() {
           <div className="slide-down mb-10">
             <h1
               className="text-[4rem] tracking-[0.2rem] font-bold text-center
-                        max-[523px]:text-[3rem] max-[423px]:text-[2.2rem]"
+                        max-[523px]:text-[3rem] max-[423px]:text-[2.2rem] max-[344px]:text-[1.5rem]"
             >
               WELCOME!
             </h1>
