@@ -1,23 +1,24 @@
-import {cart} from '../data/cart-class.js';
-import {products, loadProductsFetch} from '../data/products.js';
-import {searchedProducts} from './amazon/amazonSearchBar.js'
-import {sendProductToCart, UserVeryficationToken} from './utils/fetch.js';
+import { cart } from '../data/cart-class.js';
+import { products, loadProductsFetch } from '../data/products.js';
+import { searchedProducts } from './amazon/amazonSearchBar.js'
+import { sendProductToCart, UserVeryficationToken } from './utils/fetch.js';
 
 
 let isLogedIn = false;
 
 
 async function loadPage() {
+  loadingGif()
   try {
-    const [_, userToken] = await  Promise.all([
+    const [_, userToken] = await Promise.all([
       loadProductsFetch(),
       UserVeryficationToken(),
-
     ]);
+    loadingGif();
     loadProductsGrid();
-    if(userToken){
+    if (userToken) {
       isLogedIn = true;
-    }else{
+    } else {
       cart.loadFromStorage();
     }
   } catch (e) {
@@ -29,15 +30,15 @@ async function loadPage() {
 
 loadPage();
 
-export async function loadProductsGrid(){
+export async function loadProductsGrid() {
   let url = new URL(window.location.href);
   const searchParams = url.searchParams.get('search');
-  const searchedItems =searchParams ? searchedProducts(searchParams) : products;
-  
+  const searchedItems = searchParams ? searchedProducts(searchParams) : products;
+
   let productsHtml = '';
   let timeoutId;
-  searchedItems.forEach((content)=>{
-      productsHtml+=`<div class="product-container">
+  searchedItems.forEach((content) => {
+    productsHtml += `<div class="product-container">
             <div class="product-image-container">
               <img class="product-image" src="${content.image}">
             </div>
@@ -84,47 +85,47 @@ export async function loadProductsGrid(){
               Add to Cart
             </button>
           </div>`;
-          
-  }); 
+
+  });
   document.querySelector('.products-grid').innerHTML = productsHtml;
   addEventToButtons();
 
 
 
-    function addEventToButtons(){
-    document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
-      button.addEventListener('click', async ()=>{
+  function addEventToButtons() {
+    document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+      button.addEventListener('click', async () => {
         const productId = button.dataset.productId;
         const quantSelected = parseInt(document.querySelector(
           `.product-quantity-container[data-product-id="${button.dataset.productId}"]`).querySelector('select').value);
-    
+
 
         // cart.addToCart(productId, quantSelected);
         //i need to be loged in to add to cart at this moment
-        if(isLogedIn){
+        if (isLogedIn) {
           await sendProductToCart(productId, quantSelected);
-        }else{
-          cart.addToCart(productId,quantSelected)
+        } else {
+          cart.addToCart(productId, quantSelected)
         }
-        
 
-        const cartQuantity = parseInt(document.querySelector('.js-cart-quantity').innerHTML)+1;
+
+        const cartQuantity = parseInt(document.querySelector('.js-cart-quantity').innerHTML) + 1;
         document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
-    
+
         const timeoutElement = document.querySelector(`.product-${productId}`)
         timeoutElement.classList.add('visible-added-sign');
-        
-        if(timeoutId){
+
+        if (timeoutId) {
           clearTimeout(timeoutId);
-            timeoutId = setTimeout(()=>{
-              timeoutElement.classList.remove('visible-added-sign');
-          },2000);
-          }else{
-            timeoutId = setTimeout(()=>{
-              timeoutElement.classList.remove('visible-added-sign');
-            },2000);
-          }
+          timeoutId = setTimeout(() => {
+            timeoutElement.classList.remove('visible-added-sign');
+          }, 2000);
+        } else {
+          timeoutId = setTimeout(() => {
+            timeoutElement.classList.remove('visible-added-sign');
+          }, 2000);
+        }
       });
     });
   };
@@ -132,4 +133,20 @@ export async function loadProductsGrid(){
 
 }
 
+
+function loadingGif() {
+  const main = document.querySelector('.main');
+  const loadingExist = document.querySelector('.loadingGif');
+  console.log(loadingExist)
+  if(!loadingExist){
+    main.innerHTML = `<div class="loadingGif" style='width:100%; height:100%; display:flex; justify-content:center; align-items:center;' >
+    <img style='width:50px; height:50px;' src='./img/loading.gif'></img>
+    </div>
+    <div class="products-grid">
+    </div> `
+  }else{
+    loadingExist.remove();
+  }
+
+}
 
