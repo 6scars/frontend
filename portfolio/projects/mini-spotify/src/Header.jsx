@@ -1,6 +1,6 @@
-import logo from "./img/logos/logo1.svg";
-import logoHome from "./img/logos/logohome.svg";
-import logoAccount from "./img/logos/logoaccount.svg";
+import logo from "./images/logos/logo1.svg";
+import logoHome from "./images/logos/logohome.svg";
+import logoAccount from "./images/logos/logoaccount.svg";
 
 export default function Header() {
   return (

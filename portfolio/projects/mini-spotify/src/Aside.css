@@ -1,0 +1,22 @@
+:root{
+  --background-color:#000000;
+  --background-color:#232323;
+
+  --main-color:#E0E0E0;
+
+  --help-color:#9E9E9E;
+  --help-color2:#454545;
+  --help-color3:#7c7c7c;
+  
+  --accent-color:#E53935;
+  --accent-color2:#FF5252;
+
+}
+
+.leftBar{
+    @apply pt-[14px]
+}
+
+.playlist__paragraph{
+    color: var(--main-color)
+}
