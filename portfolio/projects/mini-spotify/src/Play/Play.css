@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 
-.play-left-section
+.play .play-left-section
 {
- @apply p-2;
+ @apply p-[25px];
 }
 
-.play-left-section .song__image{
+.play .play-left-section .song__image{
     @apply w-50 h-50
 }
+
+.play .title-authors{
+    @apply pl-[10px] pt-[3px]
+}
+
