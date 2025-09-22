@@ -1,6 +1,4 @@
-import logo from "/mini-spotify/images/logos/logo1.svg"; 
-import logoHome from "/mini-spotify/images/logos/logohome.svg";
-import logoAccount from "/mini-spotify/images/logos/logoaccount.svg";
+
 import './Header.css'
 
 export default function Header() {
@@ -11,7 +9,7 @@ export default function Header() {
     >
       <div className="left-header">
         <div className="logo-container h-full w-[96px] flex justify-center items-center">
-          <img alt="logo" src={logo} className="h-[90%] " />
+          <img alt="logo" src="/mini-spotify/images/logos/logo1.svg" className="h-[90%] " />
         </div>
       </div>
       <div
@@ -25,7 +23,7 @@ export default function Header() {
         "
         >
           <div className="h-full flex justify-center items-center">
-            <img alt="home" src={logoHome} className="h-[75%]"></img>
+            <img alt="home" src="/mini-spotify/images/logos/logohome.svg" className="h-[75%]"></img>
           </div>
           <div className="h-full flex justify-center items-center">
             <input type="text" placeholder="Search" className="search__bar"/>
@@ -34,7 +32,7 @@ export default function Header() {
       </div>
       <div className="right-header  min-w-[300px] h-full">
         <div className=" flex justify-end items-center h-full">
-          <img alt="account" src={logoAccount} className="h-[90%]" />
+          <img alt="account" src="/mini-spotify/images/logos/logoaccount.svg" className="h-[90%]" />
         </div>
       </div>
     </header>
