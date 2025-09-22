@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+.play-left-section
+{
+ @apply p-2;
+}
+
+.play-left-section .song__image{
+    @apply w-50 h-50
+}

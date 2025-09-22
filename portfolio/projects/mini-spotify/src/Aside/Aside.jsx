@@ -17,7 +17,7 @@ export default function Aside() {
           <div className="img-container h-[70px]">
             <img
               alt="playlist"
-              src="mini-spotify/images/cat1.jpg"
+              src="mini-spotify/images/songPictures/cat1.jpg"
               className="h-full w-full object-cover"
             />
           </div>

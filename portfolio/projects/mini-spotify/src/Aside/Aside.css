@@ -1,0 +1,12 @@
+@import "tailwindcss";
+ 
+/*-----------------------LEFTBAR-----------------------*/
+.leftBar {
+    @apply pt-[14px];
+    width: var(--width-of-left-bar);
+}
+
+
+.playlist__paragraph{
+    color: var(--main-color)
+}

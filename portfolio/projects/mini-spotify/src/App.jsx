@@ -1,7 +1,7 @@
-import Header from "./Header.jsx";
-import Aside from "./Aside.jsx";
-import Center from "./Center.jsx";
-import Play from "./Play.jsx";
+import Header from "./Header/Header.jsx";
+import Aside from "./Aside/Aside.jsx";
+import Center from "./Center/Center.jsx";
+import Play from "./Play/Play.jsx";
 import "./App.css";
 
 export default function MiniSpotify() {

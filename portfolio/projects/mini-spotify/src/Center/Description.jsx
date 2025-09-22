@@ -9,7 +9,7 @@ export default function Description() {
       <div className="description-img-container w-full max-h-[521px] flex justify-center">
         <img
           alt="description-img"
-          src="mini-spotify/images/cat2.jpg"
+          src="mini-spotify/images/songPictures/cat2.jpg"
           className="rounded-xl h-[521px] object-cover"
         ></img>
       </div>
@@ -22,7 +22,7 @@ export default function Description() {
         <div className="about-artist-image-container rounded-tl-xl rounded-tr-xl overflow-hidden">
           <img
             alt="artist-image"
-            src="/mini-spotify/images/cat3.jpg"
+            src="mini-spotify/images/songPictures/cat3.jpg"
             className="artist__image w-full  h-[200px] object-cover"
           />
         </div>

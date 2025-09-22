@@ -1,7 +1,8 @@
+import './Music.css'
 export default function Music() {
   return (
     <div
-      className="red-scroll-bar space-y-4 bg-[#232323] flex-[2] h-full min-w-[500px] overflow-y-auto  rounded-md
+      className="music red-scroll-bar space-y-4 bg-[#232323] flex-[2] h-full min-w-[500px] overflow-y-auto  rounded-md
           relative
         "
     >
@@ -20,7 +21,7 @@ export default function Music() {
                 <div className="playlist-image-container">
                   <img
                     className="playlist__image"
-                    src={`mini-spotify/images/cat${i + 1}.jpg`}
+                    src={`mini-spotify/images/songPictures/cat${i + 1}.jpg`}
                   ></img>
                 </div>
                 <div className="playlist-title-container">
@@ -48,7 +49,7 @@ export default function Music() {
                         <div className="song-image-container h-[75%] ">
                           <img
                             className="song__image"
-                            src="mini-spotify/images/cat1.jpg"
+                            src="mini-spotify/images/songPictures/cat1.jpg"
                           ></img>
                         </div>
                         <div className="authors-container  h-[25%] text-gray-700 font-bold flex items-center">

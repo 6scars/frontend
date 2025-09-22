@@ -1,6 +1,7 @@
-import logo from "./images/logos/logo1.svg";
-import logoHome from "./images/logos/logohome.svg";
-import logoAccount from "./images/logos/logoaccount.svg";
+import logo from "/mini-spotify/images/logos/logo1.svg"; 
+import logoHome from "/mini-spotify/images/logos/logohome.svg";
+import logoAccount from "/mini-spotify/images/logos/logoaccount.svg";
+import './Header.css'
 
 export default function Header() {
   return (
