@@ -5,8 +5,12 @@ export default function ProgressBar({
   duration,
   current,
   setCurrent,
-  progressBar
+  progressBar,
+  loop,
+  handleLoop
 }) {
+
+
   function formatTime(time){
     const mins = Math.floor(time / 60);
     const secs = Math.floor(time % 60);
@@ -16,7 +20,7 @@ export default function ProgressBar({
   }
 
   function onSeek(e){
-    const rect = e.target.getBoundingClientRect();
+    const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const prc = clickX / rect.width;
     const newTime = prc * duration;
@@ -55,6 +59,9 @@ export default function ProgressBar({
             className="w-10 h-full cursor-pointer"
           />
         </button>
+        <button>
+          <img onClick={handleLoop} className="h-[50px]  cursor-pointer" alt="loop-song" src={`./mini-spotify/images/logos/loop${loop ? '' : 'Crossed'}Song.svg`} />
+        </button>
       </div>
 
       <div className="w-full flex-1 flex justify-center items-center">
@@ -63,7 +70,7 @@ export default function ProgressBar({
           onClick={(event)=>onSeek(event)}
         className="w-[300px] h-[15px] bg-[var(--help-color2)] rounded-full overflow-hidden">
           <div style={{width:`${progressBar}%`}}
-          className=" h-full bg-white transition-all duration-300" />
+          className="h-full bg-white transition-all duration-300" />
         </div>
         <audio
           ref={audioRef}

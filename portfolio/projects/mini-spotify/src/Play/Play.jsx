@@ -4,34 +4,45 @@ import PlayRightSection from "./PlayRightSection.jsx";
 import "./Play.css";
 export default function Play() {
   const audioRef = useRef(null);
+
   const [play, setPlay] = useState(false);
   const [duration, setDuration] = useState(0);
   const [current, setCurrent] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [muted, setMuted] = useState(false);
+  const [loop, setLoop] = useState(true);
 
   useEffect(() => {
     const a = audioRef.current;
 
-    const onLoaded = ()=>{
-      setDuration(a.duration || 0)
-    }
+    const onLoaded = () => {
+      setDuration(a.duration || 0);
+    };
     const onPlay = () => setPlay(true);
-    const onEnded = () =>setPlay(false);
-    const onCurrent = () => {setCurrent(a.currentTime)};
-
+    const onPause = () => setPlay(false);
+    const onCurrent = () => setCurrent(a.currentTime);
 
     a.addEventListener("loadedmetadata", onLoaded);
     a.addEventListener("play", onPlay);
-    a.addEventListener("ended", onEnded);
+    a.addEventListener("pause", onPause);
     a.addEventListener("timeupdate", onCurrent);
 
     return () => {
       a.removeEventListener("loadedmetadata", onLoaded);
       a.removeEventListener("play", onPlay);
-      a.removeEventListener("ended", onEnded);
-      a.addEventListener("timeupdate", onCurrent);
-      
+      a.removeEventListener("pause", onPause);
+      a.removeEventListener("timeupdate", onCurrent);
     };
   }, []);
+
+  function handleVolume(volume) {
+    const a = audioRef.current;
+    if (!a) return;
+    if (volume <= 1) {
+      a.volume = volume;
+      setVolume(volume);
+    }
+  }
 
   function handlePlay() {
     const a = audioRef.current;
@@ -43,6 +54,28 @@ export default function Play() {
       setPlay(false);
       a.pause();
     }
+  }
+
+  function handleMute() {
+    const a = audioRef.current;
+    if (!muted) {
+      setMuted(true);
+      a.muted = true;
+    } else {
+      setMuted(false);
+      a.muted = false;
+    }
+    console.log(a.muted);
+  }
+
+  function handleLoop() {
+    const a = audioRef.current;
+    console.log(loop);
+    if (!a) return;
+    setLoop((prev) => {
+      a.loop = !prev; // natywne API audio
+      return !prev;
+    });
   }
 
   const progressBar = (current / duration) * 100;
@@ -87,10 +120,16 @@ export default function Play() {
         current={current}
         setCurrent={setCurrent}
         progressBar={progressBar}
+        loop={loop}
+        handleLoop={handleLoop}
       />
 
-      <PlayRightSection />
-
+      <PlayRightSection
+        volume={volume}
+        handleVolume={handleVolume}
+        muted={muted}
+        handleMute={handleMute}
+      />
     </div>
   );
 }

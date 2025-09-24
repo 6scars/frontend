@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <!-- Szary okrąg tła -->
+  <circle cx="30" cy="30" r="28" fill="#454545" />
+
+  <!-- Strzałka pętli -->
+  <path d="M20 22h15c5 0 8 3 8 8s-3 8-8 8H20l5-5"
+        fill="none" stroke="#E53935" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <path d="M40 38H25c-5 0-8-3-8-8s3-8 8-8h15l-5 5"
+        fill="none" stroke="#E53935" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Linia przekreślająca -->
+  <line x1="15" y1="15" x2="45" y2="45"
+        stroke="black" stroke-width="4" stroke-linecap="round" />
+</svg>
