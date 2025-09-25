@@ -1,5 +1,5 @@
 import "./Description.css";
-export default function Description() {
+export default function Description({ song, author }) {
   return (
     <div
       className="description red-scroll-bar h-full flex-1 min-w-[500px] overflow-y-auto grow
@@ -9,7 +9,7 @@ export default function Description() {
       <div className="description-img-container w-full max-h-[521px] flex justify-center">
         <img
           alt="description-img"
-          src="mini-spotify/images/songPictures/cat2.jpg"
+          src={`mini-spotify/images/songPictures/${song.songImage}`}
           className="rounded-xl h-[521px] object-cover"
         ></img>
       </div>
@@ -22,15 +22,17 @@ export default function Description() {
         <div className="about-artist-image-container rounded-tl-xl rounded-tr-xl overflow-hidden">
           <img
             alt="artist-image"
-            src="mini-spotify/images/songPictures/cat3.jpg"
+            src={`mini-spotify/images/authorPictures/${author.image}`}
             className="artist__image w-full  h-[200px] object-cover"
           />
         </div>
         <div className="about-artist-text-container flex flex-col gap-4">
           {" "}
-          <div className="artist-name text-white font-bold">Katy Perry</div>
+          <div className="artist-name text-white font-bold">{song.songName}</div>
           <div className="artist-follow flex">
-            <div className="followers flex-1 flex items-center">50000 right now follows</div>
+            <div className="followers flex-1 flex items-center">
+              50000 right now follows
+            </div>
             <div className="follow flex-1 flex justify-center">
               <button className="follow__button border-1 border-white rounded-full">
                 {" "}
@@ -39,9 +41,7 @@ export default function Description() {
             </div>
           </div>
           <div className="artist-short-desc">
-            Katheryn Elizabeth Hudson (born October 25, 1984), known
-            professionally as Katy Perry, is an American singer, songwriter, and
-            television personality.
+            {author.biograph}
           </div>
         </div>
       </div>

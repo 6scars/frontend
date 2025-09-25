@@ -1,5 +1,8 @@
 import './Music.css'
 export default function Music() {
+  function changeSong(){
+
+  }
   return (
     <div
       className="music red-scroll-bar space-y-4 bg-[#232323] flex-[2] h-full min-w-[500px] overflow-y-auto  rounded-md
@@ -17,7 +20,7 @@ export default function Music() {
         <div className="play-lists gap-2 grid grid-cols-3">
           {Array.from({ length: 4 }).map((_, i) => {
             return (
-              <div key={i} className="playlist">
+              <div key={i} className="playlist ">
                 <div className="playlist-image-container">
                   <img
                     className="playlist__image"
@@ -34,7 +37,7 @@ export default function Music() {
 
         {Array.from({ length: 4 }).map((_, i) => {
           return (
-            <div key={i} className="songs">
+            <div key={i} className="songs cursor-pointer" >
               <div className="songs-title-container text-white font-bold">
                 <p className="songs__title">Preapared for You</p>
               </div>

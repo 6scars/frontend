@@ -1,8 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import PlayCenterSection from "./PlayCenterSection.jsx";
 import PlayRightSection from "./PlayRightSection.jsx";
+import PlayLeftSection from "./PlayLeftSection.jsx";
 import "./Play.css";
-export default function Play() {
+
+export default function Play( {song, author}) {
   const audioRef = useRef(null);
 
   const [play, setPlay] = useState(false);
@@ -10,7 +12,7 @@ export default function Play() {
   const [current, setCurrent] = useState(0);
   const [volume, setVolume] = useState(1);
   const [muted, setMuted] = useState(false);
-  const [loop, setLoop] = useState(true);
+  const [loop, setLoop] = useState(false);
 
   useEffect(() => {
     const a = audioRef.current;
@@ -86,32 +88,9 @@ export default function Play() {
       flex justify-between
     "
     >
-      <div className="play-left-section h-full w-[300px] min-w-[300px] max-w-[300px] flex">
-        <div
-          className="song-image-container w-[70px] h-full border-1
-          flex
-        "
-        >
-          <img
-            alt="song-image"
-            src="/mini-spotify/images/songPictures/cat1.jpg"
-            className=" h-full w-full object-cover rounded-md"
-          />
-        </div>
 
-        <div
-          className="title-authors border-1 flex-1 
-          flex flex-col
-        "
-        >
-          <a className="title text-white cursor-pointer hover:underline">
-            LIFETIMES
-          </a>
-          <a className="authors text-[var(--help-color)] cursor-pointer hover:underline ">
-            Katy Parry
-          </a>
-        </div>
-      </div>
+      <PlayLeftSection song={song} author={author}/>
+
       <PlayCenterSection
         audioRef={audioRef}
         handlePlay={handlePlay}

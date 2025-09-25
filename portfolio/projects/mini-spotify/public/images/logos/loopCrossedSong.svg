@@ -1,15 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <!-- Szary okrąg tła -->
-  <circle cx="30" cy="30" r="28" fill="#454545" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Loop / Repeat">
+  <title>Loop</title>
 
-  <!-- Strzałka pętli -->
-  <path d="M20 22h15c5 0 8 3 8 8s-3 8-8 8H20l5-5"
-        fill="none" stroke="#E53935" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- szare tło -->
+  <circle cx="32" cy="32" r="30" fill="#000000" />
 
-  <path d="M40 38H25c-5 0-8-3-8-8s3-8 8-8h15l-5 5"
-        fill="none" stroke="#E53935" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- czerwony symbol loop -->
+  <path d="M20 28h16c3 0 6 3 6 6v2" 
+        fill="none" 
+        stroke="#7c7c7c" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+  <polyline points="38,34 42,38 46,34" 
+            fill="none" 
+            stroke="#7c7c7c" 
+            stroke-width="4" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" />
 
-  <!-- Linia przekreślająca -->
-  <line x1="15" y1="15" x2="45" y2="45"
-        stroke="black" stroke-width="4" stroke-linecap="round" />
+  <path d="M44 36H28c-3 0-6-3-6-6v-2" 
+        fill="none" 
+        stroke="#7c7c7c" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+  <polyline points="26,30 22,26 18,30" 
+            fill="none" 
+            stroke="#7c7c7c" 
+            stroke-width="4" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" />
 </svg>
