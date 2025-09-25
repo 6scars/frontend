@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "authors": [1],
+    "songName": "That Zen Moment",
+    "type": ["Calming", "Mystical", "Relaxed"],
+    "file": "That-Zen-Moment.mp3",
+    "songImage":"That-Zen-Moment.png",
+    "credit": " \"That Zen Moment \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "id": 2,
+    "authors": [1],
+    "songName": "Sergio's Magic Dustbin",
+    "type": ["Calming", "Mystical", "Relaxed"],
+    "file": "Sergio-s-Magic-Dustbin.mp3",
+    "songImage":"Sergio-s-Magic-Dustbin.png",
+    "credit": "\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "id": 3,
+    "authors": [1],
+    "songName": "Mesmerizing Galaxy",
+    "type": ["Calming", "Mystical", "Relaxed"],
+    "file": "Mesmerizing-Galaxy-Loop.mp3",
+    "songImage":"Mesmerizing-Galaxy.png",
+    "credit": "\"Mesmerizing Galaxy \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "id": 4,
+    "authors": [1],
+    "songName": "Lord of the Rangs",
+    "type": ["Calming", "Mystical", "Relaxed"],
+    "file": "Lord-of-the-Rangs.mp3",
+    "songImage":"Lord-of-the-Rangs.png",
+    "credit": "\"Lord of the Rangs \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+  }
+]
