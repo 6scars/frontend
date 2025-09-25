@@ -101,6 +101,7 @@ export default function Play( {song, author}) {
         progressBar={progressBar}
         loop={loop}
         handleLoop={handleLoop}
+        song={song}
       />
 
       <PlayRightSection

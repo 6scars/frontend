@@ -8,6 +8,7 @@ export default function ProgressBar({
   progressBar,
   loop,
   handleLoop,
+  song
 }) {
   function formatTime(time) {
     const mins = Math.floor(time / 60);
@@ -90,7 +91,7 @@ export default function ProgressBar({
         </div>
         <audio
           ref={audioRef}
-          src="mini-spotify/data/songs/That-Zen-Moment.mp3"
+          src={`mini-spotify/data/songs/${song.file}`}
           preload="metadata"
         />
         <div className="text-red-500  min-w-[50px]">{formatTime(duration)}</div>

@@ -14,8 +14,8 @@ export default function Description({ song, author }) {
         ></img>
       </div>
       <div className="author-title w-full rounded-xl">
-        <p className="title__paragraph font-bold">LIFETIMES</p>
-        <p className="aritst__name__paragraph font-bold">Katy Parry</p>
+        <p className="title__paragraph font-bold">{song.songName}</p>
+        <p className="aritst__name__paragraph font-bold">{author.author}</p>
       </div>
 
       <div className="description-about w-full rounded-xl ">

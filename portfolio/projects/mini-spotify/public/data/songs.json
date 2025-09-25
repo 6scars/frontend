@@ -14,6 +14,7 @@
     "songName": "Sergio's Magic Dustbin",
     "type": ["Calming", "Mystical", "Relaxed"],
     "file": "Sergio-s-Magic-Dustbin.mp3",
+    "songImage":"Sergio-s-Magic-Dustbin.png",
     "credit": "\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
   },
   {
@@ -22,6 +23,7 @@
     "songName": "Mesmerizing Galaxy",
     "type": ["Calming", "Mystical", "Relaxed"],
     "file": "Mesmerizing-Galaxy-Loop.mp3",
+    "songImage":"Mesmerizing-Galaxy.png",
     "credit": "\"Mesmerizing Galaxy \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
   },
   {
@@ -30,6 +32,7 @@
     "songName": "Lord of the Rangs",
     "type": ["Calming", "Mystical", "Relaxed"],
     "file": "Lord-of-the-Rangs.mp3",
+    "songImage":"Lord-of-the-Rangs.png",
     "credit": "\"Lord of the Rangs \" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
   }
 ]

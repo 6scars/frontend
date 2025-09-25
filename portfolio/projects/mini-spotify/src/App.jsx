@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 
 import Header from "./Header/Header.jsx";
 import Aside from "./Aside/Aside.jsx";
@@ -16,8 +16,10 @@ const authorr = authors[0]
 
 
 export default function MiniSpotify() {
-  const [song, setSong] = useState(songg);
-  const [author, setAuthor] = useState(authorr);
+  const [song, setSong] = useState(null);
+  const [author, setAuthor] = useState(null);
+
+  
 
 
 
@@ -25,8 +27,9 @@ export default function MiniSpotify() {
     <>
       <Header />
       <Aside />
-      <Center song={song} author={author} setSong={setSong} setAuthor={setAuthor} />  
-      <Play song={song} author={author}/>
+      <Center song={song} author={author} setSong={setSong} setAuthor={setAuthor} />
+      {song ? <Play song={song} author={author} /> : ''}
+
 
     </>
   );
