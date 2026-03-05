@@ -1,6 +1,6 @@
-import comet from "../images/comet.png";
-import astronaut from "../images/astronaut.png";
-import save from "../images/save.png";
+import comet from "../images/comet.webp";
+import astronaut from "../images/astronaut.webp";
+import save from "../images/save.webp";
 export function About() {
   return (
     <div className="home-desc gradient-wrapper flex flex-col md:flex-row gap-5 w-full justify-center mt-10">
